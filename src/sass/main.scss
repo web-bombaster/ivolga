@@ -1,0 +1,36 @@
+// Базовые стили
+@use "base/normalize";
+@use "base/fonts";
+@use "base/vars";
+@use "base/main";
+
+// Блоки
+@use "blocks/footer";
+@use "blocks/header";
+@use "blocks/hero";
+@use "blocks/advantages";
+@use "blocks/mobile-menu";
+@use "blocks/multi-level-menu";
+@use "blocks/qa";
+@use "blocks/work-areas";
+@use "blocks/staff";
+@use "blocks/steps";
+@use "blocks/guarantees";
+@use "blocks/page-content";
+@use "blocks/programs";
+@use "blocks/reviews";
+@use "blocks/faq";
+@use "blocks/information";
+@use "blocks/popup";
+
+// Компоненты
+@use "components/button";
+@use "components/btn-arrow";
+@use "components/burger";
+@use "components/soc-btns";
+@use "components/work-time";
+@use "components/slider-nav";
+
+// Библиотеки и их кастомизация
+// @use "../libs/magnific-popup/dist/magnific-popup.css";
+// @use '_custom-popup'; // Кастомизация стилей попапов
