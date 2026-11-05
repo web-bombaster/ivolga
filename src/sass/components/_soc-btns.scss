@@ -1,17 +1,23 @@
+@use '../base/mixins' as *;
+
 .soc-btns {
 	display: flex;
 	align-items: center;
-	gap: 12px;
+	gap: 8px;
 }
 
 .soc-btns__item {}
 
 .soc-btn {
+	color: var(--color-gray);
 	display: inline-flex;
+	@include hover-accent;
 }
 
-.soc-btn__icon {
+.soc-btn__icon {	
 	display: block;
-	width: 40px;
-	height: 40px;
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	object-position: center;
 }

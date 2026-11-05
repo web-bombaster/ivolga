@@ -1,3 +1,3 @@
-# center-iscelenie
+# ivolga
 
-Посмотреть результат можно тут: https://web-bombaster.github.io/center-iscelenie/dist/
+Посмотреть результат можно тут: https://web-bombaster.github.io/ivolga/dist/

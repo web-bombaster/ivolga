@@ -1,11 +1,18 @@
 section.hero
 	.container.hero-container
 		.hero-box
+			h1.h1.hero-title Путешествия, туры и экскурсии из Волгограда
 			.hero-tags
-				span.hero-tag Круглосуточно
-				span.hero-tag Лицензия
-				span.hero-tag Анонимность
-				span.hero-tag Стационар
-			h1.h1.hero-title Помощь при психических расстройствах и зависимости в Ростове-на-Дону
-			.hero-descr Медико-психологический центр (МПЦ) «Исцеление» — это безопасное пространство, где каждый пациент получает квалифицированную медицинскую и психотерапевтическую поддержку. Помощь опытных психиатров, психотерапевтов и наркологов в комфортных условиях современного стационара. Мы возвращаем радость к жизни.
-			button.hero-btn.btn-arrow(data-popup="callback") Получить консультацию
+				span.hero-tag 
+					svg.hero-tag__icon(aria-hidden="true")
+						use(href="assets/icons/symbol/sprite.svg#heart")
+					| Работаем с 2008 года
+				span.hero-tag 
+					svg.hero-tag__icon(aria-hidden="true")
+						use(href="assets/icons/symbol/sprite.svg#globe")
+					| 85+ направлений
+				span.hero-tag 
+					svg.hero-tag__icon(aria-hidden="true")
+						use(href="assets/icons/symbol/sprite.svg#star")
+					| 98% клиентов возвращаются к нам
+			.hero-filter

@@ -1,154 +1,71 @@
 header.header
 	.header-top
-		.container-full.header-top__container
-			a.header-top__logo(href="/verstka/")
-				img.header-top__img(src="assets/images/logo.png", alt="Исцеление - медико-психологический центр")
-			button.header-top__burger.burger.jsMobileMenuBtnToggle(type='button' aria-label='Меню сайта')
-				span.burger-line
-				span.burger-title Меню
+		.container.header-top__container
 
-			.header-top__adress
-				span г. Ростов-на-Дону
-				span ул. Варфоломеева, 243
-				span ул. Герасименко 6/2
-				i прием только по записи
+			.header-top__nav
+				ul.top-nav
+					li.top-nav__item.top-nav__item--has-submenu
+						a.top-nav__link(href="#") О компании
+						.top-nav__submenu-box
+							ul.top-nav__submenu
+								li.top-nav__item
+									a.top-nav__link(href="#") Новости
+								li.top-nav__item
+									a.top-nav__link(href="#") Новости
+								li.top-nav__item
+									a.top-nav__link(href="#") Новости
+					li.top-nav__item
+						a.top-nav__link(href="#") Отзывы
+					li.top-nav__item
+						a.top-nav__link(href="#") Контакты
+
+
 			.header-top__info
-				.header-top__work
-					svg.header-top__work-time(aria-label="График работы")
-						use(href="assets/icons/symbol/sprite.svg#time")
-					| Круглосуточно
-				.header-top__social.soc-btns
-					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram")
-						svg.soc-btn__icon(aria-hidden="true") 
-							use(href="assets/icons/symbol/sprite.svg#tg")
-					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="VK")
-						svg.soc-btn__icon(aria-hidden="true") 
-							use(href="assets/icons/symbol/sprite.svg#vk")
-					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Max")
-						svg.soc-btn__icon(aria-hidden="true") 
-							use(href="assets/icons/symbol/sprite.svg#max")
 				.header-top__phones.ht-phones
-					a.ht-phones__item(href="tel:+79885368511") +7 (988) 536 85 11
-					a.ht-phones__item(href="tel:+78002500810") 8 800 2500 810
+					.ht-phones__item
+						span Агентствам
+						a(href="tel:+79885368511") +7 (988) 536 85 11
+					.ht-phones__item
+						span Агентствам
+						a(href="tel:+79885368511") +7 (988) 536 85 11
+
+				.header-top__social.soc-btns
+					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Max")
+						svg.soc-btn__icon(aria-hidden="true")(xmlns="http://www.w3.org/2000/svg", width="20", height="20", fill="none", viewBox="0 0 20 20")
+							path(fill="currentColor", d="M9.71 1.678c-4.964.26-8.241 4.154-8.034 9.064.09 2.149.954 3.998 1.16 6.037.051.529-.1 1.181.508 1.412.75.283 1.9-.193 2.528-.628.214-.146.419-.315.576-.524.65.43 1.266.847 2.04 1.033 3.405.816 7.137-1.052 8.796-4.053C20.402 8.38 16.187 1.34 9.711 1.679M7.784 13.445c-.269.21-.528.495-.826.66-.43.23-.564-.01-.726-.39-.509-1.212-.57-3.276-.273-4.544.4-1.726 1.735-3.244 3.57-3.406 1.856-.164 3.58.778 4.358 2.48 1.723 3.786-2.688 7.525-6.103 5.203z")
+
+
+					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="VK")
+						svg.soc-btn__icon(aria-hidden="true")(xmlns="http://www.w3.org/2000/svg", width="20", height="20", fill="none", viewBox="0 0 20 20")
+							g(clip-path="url(#a)")
+								path(fill="currentColor", fill-rule="evenodd", d="M19.542 4.957c.138-.455 0-.79-.663-.79h-2.187c-.557 0-.814.289-.953.608 0 0-1.112 2.663-2.688 4.393-.51.502-.742.661-1.02.661-.14 0-.349-.159-.349-.615V4.957c0-.547-.153-.79-.616-.79h-3.44c-.348 0-.557.253-.557.494 0 .517.789.637.87 2.094V9.92c0 .694-.128.82-.407.82-.741 0-2.545-2.676-3.616-5.737-.208-.596-.418-.836-.977-.836H.75c-.625 0-.75.289-.75.608 0 .568.742 3.392 3.454 7.126 1.809 2.55 4.354 3.932 6.674 3.932 1.39 0 1.562-.306 1.562-.835V13.07c0-.614.132-.737.572-.737.325 0 .881.16 2.18 1.39 1.483 1.457 1.727 2.11 2.562 2.11h2.188c.625 0 .938-.306.758-.913-.198-.603-.907-1.48-1.846-2.518-.51-.592-1.275-1.23-1.507-1.549-.325-.409-.232-.591 0-.955 0 0 2.666-3.689 2.944-4.941", clip-rule="evenodd")
+									defs
+										clippath#a
+											path(fill="#fff", d="M0 0h20v20H0z")
+
+					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram")
+						svg.soc-btn__icon(aria-hidden="true")(xmlns="http://www.w3.org/2000/svg", width="20", height="20", fill="none", viewBox="0 0 20 20")
+							path(fill="currentColor", fill-rule="evenodd", d="M16.48 3.692a1.25 1.25 0 0 1 1.72 1.355L16.31 16.51c-.184 1.106-1.397 1.74-2.412 1.189a49 49 0 0 1-3.241-1.912c-.567-.37-2.303-1.558-2.09-2.403.184-.723 3.1-3.437 4.767-5.052.654-.634.356-1-.416-.416-1.919 1.448-4.999 3.65-6.017 4.27-.898.547-1.367.64-1.927.547-1.021-.17-1.969-.433-2.742-.754-1.045-.433-.994-1.87-.001-2.288z", clip-rule="evenodd")
+
+
 	.header-bottom
-		.container-full.header-bottom__container
+		.container.header-bottom__container
+			.header-bottom__first 
+				button.header-bottom__burger.burger.jsMobileMenuBtnToggle(type='button' aria-label='Меню сайта')
+					span.burger-line
+
+				a.header-bottom__logo(href="/verstka/")
+					img.header-bottom__img(src="assets/images/logo.png", alt="Исцеление - медико-психологический центр")
+
 			nav.header-bottom__nav
 				ul.header-nav
-					li.header-nav__item.header-nav__item--has-submenu
-						a.header-nav__link(href="#") Психическое здоровье
-						.header-nav__panel-submenu
-							.container-full
-								ul.header-nav__submenu.header-nav__submenu--1lvl
-									li.header-nav__item
-										a.header-nav__link(href="#") Психиатрия
-									li.header-nav__item
-										a.header-nav__link(href="#") Психотерапия
-									li.header-nav__item.header-nav__item--has-submenu
-										a.header-nav__link(href="#") Расстройства настроения
-										ul.header-nav__submenu.header-nav__submenu--2lvl
-											li.header-nav__item
-												a.header-nav__link(href="#") Эмоционально-лабильное расстройство личности (ПРЛ)
-											li.header-nav__item
-												a.header-nav__link(href="#") Другие расстройства личности
-									li.header-nav__item
-										a.header-nav__link(href="#") Тревожные расстройства
-									li.header-nav__item
-										a.header-nav__link(href="#") Психотические расстройства
-									li.header-nav__item
-										a.header-nav__link(href="#") Неврозы
-									li.header-nav__item
-										a.header-nav__link(href="#") Расстройства пищевого поведения
-									li.header-nav__item
-										a.header-nav__link(href="#") Стресс и кризисные состояния
-									li.header-nav__item
-										a.header-nav__link(href="#") Психосоматика
-									li.header-nav__item
-										a.header-nav__link(href="#") Семейная и супружеская психотерапия
-									li.header-nav__item
-										a.header-nav__link(href="#") Расстройства личности
-									li.header-nav__item
-										a.header-nav__link(href="#") Пациенты с «двойным диагнозом»
-
-					li.header-nav__item.header-nav__item--has-submenu
-						a.header-nav__link(href="#") Зависимости
-						.header-nav__panel-submenu
-							.container-full
-								ul.header-nav__submenu.header-nav__submenu--1lvl
-									li.header-nav__item.header-nav__item--has-submenu
-										a.header-nav__link(href="#") Лечение алкоголизма
-										ul.header-nav__submenu.header-nav__submenu--2lvl
-											li.header-nav__item
-												a.header-nav__link(href="#") Обрыв запоя
-											li.header-nav__item
-												a.header-nav__link(href="#") Купирование алкогольного абстинентного синдрома
-											li.header-nav__item
-												a.header-nav__link(href="#") Лечение алкогольных психозов
-									li.header-nav__item.header-nav__item--has-submenu
-										a.header-nav__link(href="#") Помощь наркозависимым
-										ul.header-nav__submenu.header-nav__submenu--2lvl
-											li.header-nav__item
-												a.header-nav__link(href="#") Обрыв запоя2
-											li.header-nav__item
-												a.header-nav__link(href="#") Купирование алкогольного абстинентного синдрома2
-											li.header-nav__item
-												a.header-nav__link(href="#") Лечение алкогольных психозов2
-									li.header-nav__item
-										a.header-nav__link(href="#") Лечение игровой зависимости (лудомании)
-									li.header-nav__item
-										a.header-nav__link(href="#") Помощь созависимым и родственникам
-									li.header-nav__item
-										a.header-nav__link(href="#") Зависимость у подростков
-									li.header-nav__item
-										a.header-nav__link(href="#") Мотивация и интервенция
-
-
-
 					li.header-nav__item
-						a.header-nav__link(href="#") Подросткам
+						a.header-nav__link(href="#") Автобусные туры
 					li.header-nav__item
-						a.header-nav__link(href="#") Пожилым пациентам
+						a.header-nav__link(href="#") Прием в Волгограде
+					li.header-nav__item
+						a.header-nav__link(href="#") Волгоградским школьникам
+					li.header-nav__item
+						a.header-nav__link(href="#") Бронирование отелей
 
-					li.header-nav__item
-						a.header-nav__link(href="#") Форматы лечения
-					li.header-nav__item.header-nav__item--has-submenu
-						a.header-nav__link(href="#") О клинике
-						.header-nav__panel-submenu
-							.container-full
-								ul.header-nav__submenu.header-nav__submenu--1lvl
-									li.header-nav__item.header-nav__item--has-submenu
-										a.header-nav__link(href="#") О нас
-										ul.header-nav__submenu.header-nav__submenu--2lvl
-											li.header-nav__item
-												a.header-nav__link(href="#") Разрешающие документы
-											li.header-nav__item
-												a.header-nav__link(href="#") Программа государственный гарантий
-											li.header-nav__item
-												a.header-nav__link(href="#") Контролирующие органы
-											li.header-nav__item
-												a.header-nav__link(href="#") Юридическая информация
-									li.header-nav__item
-										a.header-nav__link(href="#") Партнеры
-									li.header-nav__item
-										a.header-nav__link(href="#") Вакансии
-									li.header-nav__item
-										a.header-nav__link(href="#") Отзывы
-									li.header-nav__item
-										a.header-nav__link(href="#") Фотогалерея
-									li.header-nav__item
-										a.header-nav__link(href="#") Оплата
-									li.header-nav__item
-										a.header-nav__link(href="#") Новости
-									li.header-nav__item
-										a.header-nav__link(href="#") Вопрос-ответ
-									li.header-nav__item
-										a.header-nav__link(href="#") Документация
-
-					li.header-nav__item
-						a.header-nav__link(href="#") Цены
-					li.header-nav__item
-						a.header-nav__link(href="#") Контакты
-
-			button.header-bottom__search
-				svg.header-bottom__search-icon(aria-label="Поиск") 
-					use(href="assets/icons/symbol/sprite.svg#search")
-			button.header-bottom__feedback.btn(data-popup="callback") Заказать звонок
+			button.header-bottom__feedback.btn(data-popup="callback") Получить консультацию

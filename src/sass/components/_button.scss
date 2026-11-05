@@ -1,23 +1,24 @@
 .btn {
+	padding: 10px 16px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.42857;
+	text-align: center;
+	color: var(--color-accent);
+	border: 1px solid #f7941d;
+	border-radius: 10px;
 	transition: all 0.25s;
 	cursor: pointer;
-	border: none;
-	border-radius: 100px;
-	background-color: #02ad4a;
-	padding: 17px 26px 15px 26px;
-	color: #fff;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.1;
-	text-transform: uppercase;
+	background-color: #fff;
 
 	&:hover {
-		background-color: #059c44;
+		color: #fff;
+		background-color: var(--color-accent);
 	}
 
 	@media (hover: hover) {
 		&:hover {
-			transform: translateY(-2px);
+			transform: translateY(-1px);
 		}
 	}
 }

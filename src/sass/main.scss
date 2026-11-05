@@ -2,6 +2,7 @@
 @use "base/normalize";
 @use "base/fonts";
 @use "base/vars";
+@use "base/mixins";
 @use "base/main";
 
 // Блоки
@@ -25,10 +26,8 @@
 
 // Компоненты
 @use "components/button";
-@use "components/btn-arrow";
 @use "components/burger";
 @use "components/soc-btns";
-@use "components/work-time";
 @use "components/slider-nav";
 
 // Библиотеки и их кастомизация

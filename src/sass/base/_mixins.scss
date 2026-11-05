@@ -1,0 +1,7 @@
+@mixin hover-accent {
+	transition: all .25s;
+
+	&:hover {
+		color: var(--color-accent);
+	}
+}
