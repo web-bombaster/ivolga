@@ -6,23 +6,27 @@
 @use "base/main";
 
 // Блоки
-@use "blocks/footer";
 @use "blocks/header";
 @use "blocks/hero";
-@use "blocks/advantages";
+@use "blocks/about";
+@use "blocks/cooperation";
+@use "blocks/related-posts";
+@use "blocks/faq";
 @use "blocks/mobile-menu";
 @use "blocks/multi-level-menu";
-@use "blocks/qa";
-@use "blocks/work-areas";
-@use "blocks/staff";
-@use "blocks/steps";
-@use "blocks/guarantees";
-@use "blocks/page-content";
-@use "blocks/programs";
-@use "blocks/reviews";
-@use "blocks/faq";
-@use "blocks/information";
 @use "blocks/popup";
+@use "blocks/footer";
+
+// @use "blocks/reviews";
+// @use "blocks/page-content";
+// @use "blocks/guarantees";
+// @use "blocks/steps";
+// @use "blocks/programs";
+// @use "blocks/work-areas";
+// @use "blocks/qa";
+// @use "blocks/advantages";
+// @use "blocks/staff";
+// @use "blocks/information";
 
 // Компоненты
 @use "components/button";

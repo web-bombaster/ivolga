@@ -1,0 +1,62 @@
+.cooperation {}
+
+.cooperation-container {
+}
+
+.cooperation-box {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	background-color: var(--color-light-gray);
+	border-radius: 24px;
+	overflow: hidden;
+
+	@media screen and (max-width: 992px) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+.cooperation-info {
+	padding: 38px 36px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.cooperation-info__top {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.cooperation-info__btbns {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+
+	.btn {
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 16px;
+	}
+}
+
+.cooperation-title {}
+
+.cooperation-descr {
+	color: var(--color-gray);
+}
+
+.cooperation-img {
+	display: flex;
+	align-items: center;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 24px;
+	}
+}
