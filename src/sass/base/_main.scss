@@ -152,6 +152,25 @@ input::placeholder {
 	gap: 38px;
 }
 
+.section-grid {
+	display: grid;
+	grid-template-areas: 
+		'a b'
+		'c c'
+	;
+	grid-template-columns: 1fr auto;
+	gap: 38px;
+
+	@media screen and (max-width: 600px) {
+		grid-template-areas: 
+			'a'
+			'c'
+			'b'
+		;
+		grid-template-columns: 1fr;
+	}
+}
+
 button,
 input,
 textarea,

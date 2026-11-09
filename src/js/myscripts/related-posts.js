@@ -1,11 +1,11 @@
-function stepsSliderInit() {
-	const stepsSlider = document.querySelector('.js-related-posts');
+function relatedPostsSliderInit() {
+	const relatedPostsSlider = document.querySelector('.js-related-posts');
 
-	if (!stepsSlider) {
+	if (!relatedPostsSlider) {
 		return;
 	}
 
-	new Swiper(stepsSlider, {
+	new Swiper(relatedPostsSlider, {
 		slidesPerView: 1.1,
 		spaceBetween: 10,
 		
@@ -27,4 +27,4 @@ function stepsSliderInit() {
 	});
 }
 
-stepsSliderInit();
+relatedPostsSliderInit();

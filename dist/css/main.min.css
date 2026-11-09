@@ -566,6 +566,19 @@ input::placeholder {
   gap: 38px;
 }
 
+.section-grid {
+  display: grid;
+  grid-template-areas: "a b" "c c";
+  grid-template-columns: 1fr auto;
+  gap: 38px;
+}
+@media screen and (max-width: 600px) {
+  .section-grid {
+    grid-template-areas: "a" "c" "b";
+    grid-template-columns: 1fr;
+  }
+}
+
 button,
 input,
 textarea,
@@ -973,6 +986,216 @@ button {
 }
 .about-item__descr span {
   color: var(--color-text);
+}
+
+.approach__item {
+  padding: 40px 24px 22px;
+  background-image: url("../assets/images/approach-bg-2.png");
+  background-size: 100% 100% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.approach__name-box {
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.approach__name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22222;
+  text-wrap: balance;
+}
+
+.approach__link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: var(--color-blue);
+  transition: all 0.25s;
+}
+@media (hover: hover) {
+  .approach__link {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .approach__item:hover .approach__link {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.approach__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ideas {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--color-light-gray);
+  border-radius: 32px;
+}
+
+.ideas-title {
+  grid-area: a;
+}
+
+.ideas-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-area: c;
+  max-width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .ideas-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.idea-item {
+  padding: 8px;
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 24px;
+}
+@media screen and (max-width: 600px) {
+  .idea-item {
+    flex-direction: column;
+  }
+}
+
+.idea-item__img {
+  position: relative;
+  aspect-ratio: 300/216;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 46.2962962963%;
+  height: auto;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+@media screen and (max-width: 600px) {
+  .idea-item__img {
+    width: 100%;
+  }
+}
+.idea-item__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: all 0.25s;
+}
+.idea-item:hover .idea-item__img img {
+  transform: scale(1.05);
+}
+
+.idea-item__hints {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.idea-item__hint {
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: var(--color-text);
+  background-color: var(--color-light-gray);
+  border-radius: 18px;
+}
+
+.idea-item__hint--accent {
+  color: #fff;
+  background-color: var(--color-accent);
+}
+
+.idea-item__info {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.idea-item__top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.idea-item__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22222;
+  text-wrap: balance;
+}
+
+.idea-item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.idea-item__tag {
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  text-wrap: balance;
+  color: var(--color-text);
+  border-radius: 8px;
+  background-color: var(--color-light-gray);
+  transition: all 0.25s;
+}
+.idea-item__tag:hover {
+  color: #fff;
+  background-color: var(--color-accent);
+}
+
+.idea-item__tag--btn {
+  padding: 5px 12px;
+}
+
+.idea-item__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.idea-item__price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.ideas-btn {
+  grid-area: b;
+  align-self: center;
 }
 
 .cooperation-box {
@@ -1893,6 +2116,15 @@ button {
 .btn.blue:hover {
   color: #fff;
   background-color: var(--color-blue);
+}
+.btn.white {
+  color: var(--color-text);
+  border-color: #fff;
+  background-color: #fff;
+}
+.btn.white:hover {
+  color: #fff;
+  background-color: var(--color-accent);
 }
 
 .btn-fill {

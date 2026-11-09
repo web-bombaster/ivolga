@@ -1,0 +1,71 @@
+.approach {}
+
+.approach__container {}
+
+.approach__box {}
+
+.approach__slider {}
+
+.approach__list {}
+
+.approach__item {
+	padding: 40px 24px 22px;
+	background-image: url('../assets/images/approach-bg-2.png');
+	background-size: 100% 100% !important;
+	background-position: center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	height: auto;
+}
+
+.approach__name-box {
+	margin-bottom: 18px;
+	position: relative;
+	padding-bottom: 30px;
+}
+
+.approach__name {
+	margin: 0;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.22222;
+	text-wrap: balance;
+}
+
+.approach__link {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1.42857;
+	color: var(--color-blue);
+	transition: all .25s;
+
+	@media (hover: hover) {
+		opacity: 0;
+		visibility: hidden;
+	
+		.approach__item:hover & {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+}
+
+.approach__image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.approach__nav {}
+
+.approach__nav-box {}
+
+.approach__prev {}
+
+.approach__next {}
+
+.approach-title {}
