@@ -3,18 +3,23 @@
 document.addEventListener("DOMContentLoaded", function () {
 	
 	// include './../js/myscripts/helpers.js'
-	// include './../js/myscripts/footerMenuToggle.js'
+	// include './../js/myscripts/hot-tours.js'
+	// include './../js/myscripts/ideas.js'
+	// include './../js/myscripts/approach.js'
+	// include './../js/myscripts/related-posts.js'
+
 	// include './../js/myscripts/mobile-menu.js'
 	// include './../js/myscripts/header-fixed.js'
 	// include './../js/myscripts/multi-level-menu.js'
-	// include './../js/myscripts/staff.js'
-	//- include './../js/myscripts/steps.js'
-	// include './../js/myscripts/related-posts.js'
-	// include './../js/myscripts/approach.js'
 	// include './../js/myscripts/guarantees.js'
 	// include './../js/myscripts/page-content-more.js'
 	// include './../js/myscripts/information.js'
+	
 	// include './../js/myscripts/inputmask.js'
 	// include './../js/myscripts/popup.js'
+	
+	// include './../js/myscripts/footerMenuToggle.js'
+	// include './../js/myscripts/staff.js'
+	//- include './../js/myscripts/steps.js'
 
 });

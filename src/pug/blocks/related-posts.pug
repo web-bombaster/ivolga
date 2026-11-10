@@ -1,3 +1,11 @@
+mixin related-post(image, date, dateText, title, link = '#')
+	article.related-posts__item.swiper-slide
+		a.related-posts__link(href=link)
+			.related-posts__image
+				img(src=image, alt="", loading="lazy")
+			time.related-posts__date(datetime=date)= dateText
+			p.related-posts__name= title
+
 .related-posts
 	.related-posts__container.container
 		.related-posts__box.section-col
@@ -7,27 +15,28 @@
 			.slider-wrapper
 				.related-posts__slider.swiper.js-related-posts
 					.related-posts__list.swiper-wrapper
-						
-						article.related-posts__item.swiper-slide
-							a.related-posts__link(href="#")
-								.related-posts__image
-									img(src="assets/images/related-posts-01.jpg", alt="", loading="lazy")
-								time.related-posts__date(datetime="2026-11-05") 5 ноября 2026
-								p.related-posts__name Куда поехать в сентябре: 7 идей для бюджетных путешествий по России и не только
-						
-						article.related-posts__item.swiper-slide
-							a.related-posts__link(href="#")
-								.related-posts__image
-									img(src="assets/images/related-posts-02.jpg", alt="", loading="lazy")
-								time.related-posts__date(datetime="2026-11-05") 5 ноября 2026
-								p.related-posts__name Пешком по Тбилиси: мост-прищепка, дом-дженга и ещё 8 необычных мест
-						
-						article.related-posts__item.swiper-slide
-							a.related-posts__link(href="#")
-								.related-posts__image
-									img(src="assets/images/related-posts-03.jpg", alt="", loading="lazy")
-								time.related-posts__date(datetime="2026-11-05") 5 ноября 2026
-								p.related-posts__name Календарь школьных каникул 2026/2027: когда планировать семейный отдых
+
+						+related-post(
+							'assets/images/related-posts-01.jpg',
+							'2026-05-24',
+							'24 мая 2026',
+							'Куда поехать в сентябре: 7 идей для бюджетных путешествий по России и не только'
+						)
+
+						+related-post(
+							'assets/images/related-posts-02.jpg',
+							'2026-05-24',
+							'24 мая 2026',
+							'Пешком по Тбилиси: мост-прищепка, дом-дженга и ещё 8 необычных мест'
+						)
+
+						+related-post(
+							'assets/images/related-posts-03.jpg',
+							'2026-05-24',
+							'24 мая 2026',
+							'Календарь школьных каникул 2026/2027: когда планировать семейный отдых',
+							'/articles/school-holidays/'
+						)
 				.related-posts__nav.slider-nav
 					.related-posts__nav-box.slider-nav__box
 						.related-posts__prev.slider-nav__prev

@@ -52,6 +52,17 @@
 			background-color: var(--color-accent);
 		}
 	}
+
+	&.gray {
+		color: var(--color-text);
+		border-color: var(--color-light-gray);
+		background-color: var(--color-light-gray);
+		
+		&:hover {
+			color: #fff;
+			background-color: var(--color-accent);
+		}
+	}
 }
 
 .btn-fill {

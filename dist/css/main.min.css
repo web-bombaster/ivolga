@@ -878,6 +878,177 @@ button {
   background-color: #fff;
 }
 
+.hot-tours-title {
+  grid-area: a;
+}
+
+.hot-tours__slider-wrapper {
+  grid-area: c;
+}
+
+.hot-tours-list {
+  margin: 0;
+  padding: 0;
+}
+
+.hot-tour {
+  padding: 8px 8px 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  background-color: var(--color-light-gray);
+  box-sizing: border-box;
+  height: auto;
+}
+
+.hot-tour__img {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.hot-tour__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hot-tour__info {
+  padding: 16px 12px 0;
+}
+
+.hot-tour__top {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hot-tour__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22222;
+  text-wrap: balance;
+  color: var(--color-text);
+}
+
+.hot-tour__descr {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  text-wrap: balance;
+  color: var(--color-gray);
+}
+
+.hot-tour__items {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hot-tour__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.hot-tour__date {
+  padding: 4px 8px 4px 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: var(--color-text);
+  color: #000;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.hot-tour__date-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+  color: var(--color-gray);
+  fill: currentColor;
+}
+.hot-tour__date-icon path {
+  fill: currentColor;
+}
+
+.hot-tour__period {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: var(--color-gray);
+}
+
+.hot-tour__dates-btn {
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.hot-tour__dates-btn:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+.hot-tour__dates-btn .icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.hot-tour__bottom {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.hot-tour__price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.38095;
+  color: var(--color-text);
+}
+
+.hot-tour__price-old {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  text-decoration: line-through;
+  color: var(--color-gray);
+}
+
+.hot-tours__btn {
+  grid-area: b;
+}
+
 .about-box {
   padding: 38px 36px;
   display: flex;
@@ -1105,35 +1276,12 @@ button {
   transform: scale(1.05);
 }
 
-.idea-item__hints {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.idea-item__hint {
-  padding: 5px 10px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33333;
-  color: var(--color-text);
-  background-color: var(--color-light-gray);
-  border-radius: 18px;
-}
-
-.idea-item__hint--accent {
-  color: #fff;
-  background-color: var(--color-accent);
-}
-
 .idea-item__info {
   padding-top: 12px;
   padding-bottom: 12px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 12px;
 }
 
@@ -1174,9 +1322,16 @@ button {
   color: #fff;
   background-color: var(--color-accent);
 }
+.idea-item__tag.hidden {
+  display: none;
+}
 
 .idea-item__tag--btn {
   padding: 5px 12px;
+  color: var(--color-accent);
+}
+.idea-item__tag--btn.open svg {
+  transform: rotate(180deg);
 }
 
 .idea-item__bottom {
@@ -2126,6 +2281,15 @@ button {
   color: #fff;
   background-color: var(--color-accent);
 }
+.btn.gray {
+  color: var(--color-text);
+  border-color: var(--color-light-gray);
+  background-color: var(--color-light-gray);
+}
+.btn.gray:hover {
+  color: #fff;
+  background-color: var(--color-accent);
+}
 
 .btn-fill {
   color: #fff;
@@ -2309,5 +2473,40 @@ button {
   .slider-nav__next {
     right: 24px;
   }
+}
+
+.badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: var(--color-text);
+  background-color: var(--color-light-gray);
+  border-radius: 18px;
+}
+
+.badge--accent {
+  color: #fff;
+  background-color: var(--color-accent);
+}
+
+.badge-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 /*# sourceMappingURL=main.min.css.map */

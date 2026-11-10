@@ -1,0 +1,137 @@
+include ../mixins/badge-item.pug
+
+mixin hot-tour(image, title, descr, badges, dates, price, oldPrice, link = '#')
+	li.hot-tours-list__item.hot-tour.swiper-slide
+		.hot-tour__img
+			img(src=image, alt="")
+			if badges && badges.length
+				.badges
+					each badge in badges
+						+badge-item(badge.text, badge.accent, badge.icon)
+
+		.hot-tour__info
+			.hot-tour__top
+				p.hot-tour__title= title
+				p.hot-tour__descr= descr
+
+			.hot-tour__items
+				each item in dates
+					.hot-tour__item
+						span.hot-tour__date
+							svg.hot-tour__date-icon(aria-hidden="true")
+								use(href="assets/icons/symbol/sprite.svg#calendar")
+							| #{item.date}
+						if item.period
+							span.hot-tour__period= item.period
+						if item.moreDates
+							span.hot-tour__dates-btn
+								| + #{item.moreDates} дат
+								svg.icon(xmlns="http://www.w3.org/2000/svg", width="16", height="16", fill="none", viewBox="0 0 16 16")
+									path(stroke="currentColor", stroke-width="1.778", d="m12 6-4 4-4-4")
+
+			.hot-tour__bottom
+				.hot-tour__price
+					| #{price}
+					if oldPrice
+						span.hot-tour__price-old= oldPrice
+
+				a.hot-tour__btn.btn(href=link) Подробнее
+
+.hot-tours
+	.hot-tours__container.container
+		.hot-tours__box.section-grid
+			h2.h2.hot-tours-title Горящие туры
+
+			.hot-tours__slider-wrapper.slider-wrapper
+				.hot-tours__slider.swiper.js-hot-tours-slider
+					ul.hot-tours-list.swiper-wrapper
+
+						+hot-tour(
+							'assets/images/hot-tours-01.jpg',
+							'Тур в Коломну',
+							'Три вкуса истории',
+							[
+								{text: 'Горящий', accent: true, icon: 'fire'},
+								{text: 'Купили более 12 раз'}
+							],
+							[
+								{date: '7 сен — 11 сен', period: '4 дня / 3 ночи'},
+								{date: '10 сен — 15 сен', moreDates: 11}
+							],
+							'20 550 ₽',
+							'28 550 ₽'
+						)
+
+						+hot-tour(
+							'assets/images/hot-tours-02.jpg',
+							'Тур в Коломну',
+							'Три вкуса истории',
+							[
+								{text: 'Горящий', accent: true, icon: 'fire'},
+								{text: 'Популярный'}
+							],
+							[
+								{date: '14 сен — 18 сен', period: '3 дня / 2 ночи'},
+								{date: '14 сен — 18 сен', moreDates: 7}
+							],
+							'от 16 800 ₽',
+							''
+						)
+
+						+hot-tour(
+							'assets/images/hot-tours-03.jpg',
+							'Тур в Коломну',
+							'Три вкуса истории',
+							[
+								{text: 'Горящий', accent: true, icon: 'fire'},
+								{text: 'Новинка'}
+							],
+							[
+								{date: '14 сен — 18 сен', period: '4 дня / 3 ночи'},
+								{date: '14 сен — 18 сен', moreDates: 23}
+							],
+							'20 550 ₽',
+							'28 550 ₽'
+						)
+
+						+hot-tour(
+							'assets/images/hot-tours-04.jpg',
+							'Тур в Коломну',
+							'Три вкуса истории',
+							[
+								{text: 'Горящий', accent: true, icon: 'fire'},
+								{text: 'Новинка'}
+							],
+							[
+								{date: '14 сен — 18 сен', period: '6 дней / 5 ночей'},
+								{date: '14 сен — 18 сен', moreDates: 5}
+							],
+							'от 16 800 ₽',
+							''
+						)
+
+						+hot-tour(
+							'assets/images/hot-tours-01.jpg',
+							'Тур в Коломну',
+							'Три вкуса истории',
+							[
+								{text: 'Горящий', accent: true, icon: 'fire'},
+								{text: 'Купили более 12 раз'}
+							],
+							[
+								{date: '14 сен — 18 сен', period: '4 дня / 3 ночи'},
+								{date: '16 сен — 20 сен', moreDates: 18}
+							],
+							'20 550 ₽',
+							'28 550 ₽'
+						)
+
+				.hot-tours__nav.slider-nav
+					.hot-tours__nav-box.slider-nav__box
+						.hot-tours__prev.slider-nav__prev
+						.hot-tours__next.slider-nav__next
+			
+			a.hot-tours__btn.btn.gray(href="#") 
+				| Все туры
+				svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", fill="none", viewBox="0 0 24 24").btn-icon
+					path(fill="currentColor", d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z")

@@ -1,0 +1,6 @@
+mixin badge-item(text, accent = false, icon = '')
+	span(class=accent ? 'badge badge--accent' : 'badge')
+		if icon
+			svg.badge-icon(aria-hidden="true")
+				use(href=`assets/icons/symbol/sprite.svg#${icon}`)
+		| #{text}

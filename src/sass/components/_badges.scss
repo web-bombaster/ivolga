@@ -1,0 +1,33 @@
+.badges {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.badge {
+	padding: 5px 10px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33333;
+	color: var(--color-text);
+	background-color: var(--color-light-gray);
+	border-radius: 18px;
+}
+
+.badge--accent {
+	color: #fff;
+	background-color: var(--color-accent);
+}
+
+.badge-icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+	object-fit: contain;
+}

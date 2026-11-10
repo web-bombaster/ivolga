@@ -1,0 +1,6 @@
+mixin tag-tour(text, icon = '')
+	span(class="tag-tour")
+		if icon
+			svg.tag-tour__icon(aria-hidden="true")
+				use(href=`assets/icons/symbol/sprite.svg#${icon}`)
+		| #{text}

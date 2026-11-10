@@ -9,6 +9,7 @@
 // Блоки
 @use "blocks/header";
 @use "blocks/hero";
+@use "blocks/hot-tours";
 @use "blocks/about";
 @use "blocks/approach";
 @use "blocks/ideas";
@@ -36,6 +37,7 @@
 @use "components/burger";
 @use "components/soc-btns";
 @use "components/slider-nav";
+@use "components/badges";
 
 // Библиотеки и их кастомизация
 // @use "../libs/magnific-popup/dist/magnific-popup.css";

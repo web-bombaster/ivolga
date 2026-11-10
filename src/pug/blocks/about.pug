@@ -1,3 +1,15 @@
+mixin about-item(icon, title, description = '', iconMod = false)
+	.about-item
+		img.about-item__icon(
+			class=iconMod ? 'about-item__icon--mod' : ''
+			src=icon
+			alt=""
+		)
+		.about-item__info
+			span.about-item__title= title
+			if description
+				p.about-item__descr!= description
+
 .about
 	.about-container.container
 		.about-box
@@ -12,26 +24,25 @@
 					svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", fill="none", viewBox="0 0 24 24").btn-icon
 						path(fill="currentColor", d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z")
 			.about-items
-				.about-item
-					img.about-item__icon(src="assets/images/about-01.svg", alt="")
-					.about-item__info
-						span.about-item__title Мы в реестре туроператоров
-						p.about-item__descr 
-							| ООО «Туристическая компания И‑Волга» 
-							span 
-								| РТО 008863
+				+about-item(
+					'assets/images/about-01.svg',
+					'Мы в реестре туроператоров',
+					'ООО «Туристическая компания И‑Волга» <span>РТО 008863</span>'
+				)
 
+				+about-item(
+					'assets/images/about-02.svg',
+					'Мы в Российском Союзе Туриндустрии'
+				)
 
-				.about-item
-					img.about-item__icon(src="assets/images/about-02.svg", alt="")
-					.about-item__info
-						span.about-item__title Мы в Российском Союзе Туриндустрии
-				.about-item
-					img.about-item__icon(src="assets/images/about-03.svg", alt="")
-					.about-item__info
-						span.about-item__title Cертификат Роскачества
-				.about-item
-					img.about-item__icon.about-item__icon--mod(src="assets/images/about-04.svg", alt="")
-					.about-item__info
-						span.about-item__title 
-							| Стратегический партнер
+				+about-item(
+					'assets/images/about-03.svg',
+					'Сертификат Роскачества'
+				)
+
+				+about-item(
+					'assets/images/about-04.svg',
+					'Стратегический партнер',
+					'',
+					true
+				)
