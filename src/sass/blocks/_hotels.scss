@@ -1,0 +1,53 @@
+.hotels {}
+
+.hotels__container {}
+
+.hotels__box {}
+
+.hotels__slider {}
+
+.hotels__slider-wrapper {
+	grid-area: c;
+}
+
+.hotels__nav {}
+
+.hotels__nav-box {}
+
+.hotels__prev {}
+
+.hotels__next {}
+
+.hotels__btn {
+	grid-area: b;
+}
+
+.hotels-top {
+	grid-area: a;
+}
+
+.hotels-title {}
+
+.hotels-descr {}
+
+.hotels-list {}
+
+.hotel-item {}
+
+.hotel-item__img {}
+
+.hotel-item__badges {}
+
+.hotel-item__tags {}
+
+.hotel-item__info {}
+
+.hotel-item__title {}
+
+.hotel-item__bottom {}
+
+.hotel-item__price {}
+
+.hotel-item__duration {}
+
+.hotel-item__duration-icon {}

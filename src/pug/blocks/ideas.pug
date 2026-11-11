@@ -119,6 +119,6 @@ mixin idea-item(image, title, badges, tags, price, link = '#', showMore = false)
 				)
 			a.ideas-btn.btn.white(href="#") 
 				| Все идеи
-				svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", fill="none", viewBox="0 0 24 24").btn-icon
-					path(fill="currentColor", d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z")
+				svg.btn-icon(aria-hidden="true")
+					use(href="assets/icons/symbol/sprite.svg#arrow-right")
 

@@ -13,6 +13,7 @@
 @use "blocks/about";
 @use "blocks/approach";
 @use "blocks/ideas";
+@use "blocks/hotels";
 @use "blocks/cooperation";
 @use "blocks/related-posts";
 @use "blocks/faq";
@@ -38,6 +39,7 @@
 @use "components/soc-btns";
 @use "components/slider-nav";
 @use "components/badges";
+@use "components/tag-tour";
 
 // Библиотеки и их кастомизация
 // @use "../libs/magnific-popup/dist/magnific-popup.css";

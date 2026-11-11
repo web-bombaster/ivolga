@@ -1,0 +1,40 @@
+mixin hot-tour(image, title, descr, badges, tags, dates, price, oldPrice, link = '#')
+	li.hot-tours-list__item.hot-tour.swiper-slide
+		.hot-tour__img
+			img(src=image, alt="")
+			if badges && badges.length
+				.hot-tour__badges.badges
+					each badge in badges
+						+badge-item(badge.text, badge.accent, badge.icon)
+			if tags && tags.length
+				.hot-tour__tags.tags-tour
+					each tag in tags
+						+tag-tour(tag.text, tag.icon)
+
+		.hot-tour__info
+			.hot-tour__top
+				p.hot-tour__title= title
+				p.hot-tour__descr= descr
+
+			.hot-tour__items
+				each item in dates
+					.hot-tour__item
+						span.hot-tour__date
+							svg.hot-tour__date-icon(aria-hidden="true")
+								use(href="assets/icons/symbol/sprite.svg#calendar")
+							| #{item.date}
+						if item.period
+							span.hot-tour__period= item.period
+						if item.moreDates
+							span.hot-tour__dates-btn
+								| + #{item.moreDates} дат
+								svg.icon(xmlns="http://www.w3.org/2000/svg", width="16", height="16", fill="none", viewBox="0 0 16 16")
+									path(stroke="currentColor", stroke-width="1.778", d="m12 6-4 4-4-4")
+
+			.hot-tour__bottom
+				.hot-tour__price
+					| #{price}
+					if oldPrice
+						span.hot-tour__price-old= oldPrice
+
+				a.hot-tour__btn.btn(href=link) Подробнее

@@ -1,0 +1,74 @@
+include ../mixins/tag-tour.pug
+include ../mixins/badge-item.pug
+
+.hotels
+	.hotels__container.container
+		.hotels__box.section-grid
+			.hotels-top
+				h2.h2.hotels-title Отели по суперцене
+				p.hotels-descr Самые выгодные предложения
+
+
+			.hotels__slider-wrapper.slider-wrapper
+				.hotels__slider.swiper.js-hotels-slider
+					.hotels-list.swiper-wrapper
+
+						a.hotel-item.swiper-slide(href="#") 
+							.hotel-item__img
+								img(src="assets/images/hotels-01.jpg", alt="")
+								.hotel-item__badges.badges
+									.badge
+										svg.badge-icon(aria-hidden="true")
+											use(href="assets/icons/symbol/sprite.svg#lightning")
+										| -25%
+									.badge.badge--accent
+										| Рекомендуем
+								.hotel-item__tags.tags-tour
+									.tag-tour
+										svg.tag-tour__icon(aria-hidden="true")
+											use(href="assets/icons/symbol/sprite.svg#lightning")
+										| Абхазия Гагры
+							.hotel-item__info
+								.hotel-item__title
+									| Дом отдыха
+									span Апсны-Абазашта
+								.hotel-item__bottom
+									span.hotel-item__price от 14 880 ₽ / чел
+									span.hotel-item__duration
+										svg.hotel-item__duration-icon(aria-hidden="true")
+											use(href="assets/icons/symbol/sprite.svg#moon2")
+									
+										| 3 ночи
+
+						a.hotel-item.swiper-slide(href="#") 
+							.hotel-item__img
+								img(src="assets/images/hotels-02.jpg", alt="")
+								.hotel-item__badges.badges
+									.badge
+										| -25%
+								.hotel-item__tags.tags-tour
+									.tag-tour
+										svg.tag-tour__icon(aria-hidden="true")
+											use(href="assets/icons/symbol/sprite.svg#lightning")
+										| Сочи
+							.hotel-item__info
+								.hotel-item__title
+									| Гостиница
+									span Арстаа
+								.hotel-item__bottom
+									span.hotel-item__price от 7 850 ₽ / чел
+									span.hotel-item__duration
+										svg.hotel-item__duration-icon(aria-hidden="true")
+											use(href="assets/icons/symbol/sprite.svg#moon2")
+									
+										| 12 ночей
+
+				.hotels__nav.slider-nav
+					.hotels__nav-box.slider-nav__box
+						.hotels__prev.slider-nav__prev
+						.hotels__next.slider-nav__next
+			
+			a.hotels__btn.btn.gray(href="#") 
+				| Все отели
+				svg.btn-icon(aria-hidden="true")
+					use(href="assets/icons/symbol/sprite.svg#arrow-right")

@@ -1,0 +1,22 @@
+.tags-tour {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+.tag-tour {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33333;
+	color: #fff;
+}
+.tag-tour__icon {
+	flex-shrink: 0;
+	display: block;
+	width: 16px;
+	height: 16px;
+	object-fit: contain;
+	object-position: center;
+}
