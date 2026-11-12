@@ -1,99 +1,71 @@
 footer.footer
-	.footer-container.container
-		.footer-grid
-			.footer-col__box
-				.footer-col-bl
-					.footer-bl
-						a.footer-bl__title(href="#") зависимости
-						.footer-bl__items
-							a.footer-bl__item(href="#") Помощь наркозависимым
-							a.footer-bl__item(href="#") Лечение игровой зависимости (лудомании)
-							a.footer-bl__item(href="#") Помощь созависимым и родственникам
-							a.footer-bl__item(href="#") Зависимость у подростков
-							a.footer-bl__item(href="#") Мотивация и интервенция
-					.footer-bl
-						a.footer-bl__title(href="#") пожилым пациентам
-						.footer-bl__items
-							a.footer-bl__item(href="#") Деменция
-							a.footer-bl__item(href="#") Болезнь Альцгеймера
-					.footer-bl
-						a.footer-bl__title(href="#") Подросткам
-						.footer-bl__items
-							a.footer-bl__item(href="#") Расстройства аутического спектра
-							a.footer-bl__item(href="#") Подростковые депрессии и тревожные расстройства
-							a.footer-bl__item(href="#") СДВГ
-							a.footer-bl__item(href="#") РПП у подростков
-							a.footer-bl__item(href="#") Детско-родительские отношения
-				.footer-col-bl
-					.footer-bl
-						a.footer-bl__title(href="#") психотерапия
-						.footer-bl__items
-							a.footer-bl__item(href="#") Расстройства настроения
-							a.footer-bl__item(href="#") Тревожные расстройства
-							a.footer-bl__item(href="#") Психотические расстройства
-							a.footer-bl__item(href="#") Неврозы
-							a.footer-bl__item(href="#") Расстройства пищевого поведения
-							a.footer-bl__item(href="#") Стресс и кризисные состояния
-							a.footer-bl__item(href="#") Психосоматика
-							a.footer-bl__item(href="#") Семейная и супружеская психотерапия
-							a.footer-bl__item(href="#") Расстройства личности
-							a.footer-bl__item(href="#") Пациенты с «двойным диагнозом»
-					.footer-bl
-						a.footer-bl__title(href="#") форматы лечения
-						.footer-bl__items
-							a.footer-bl__item(href="#") Круглосуточный стационар
-							a.footer-bl__item(href="#") Дневной стационар
-							a.footer-bl__item(href="#") Амбулаторное лечение
+	.container
+		.footer__top
+			.footer__grid
+				.footer__col.f-col-01.fcol-gap-24
+					a.footer__logo(href="/") 
+						img.footer__logo-img(src="assets/images/logo.png", alt="")
+					.fcol-gap-14
+						a(href="mailto:zakaz@i-volga.com").ftext-18 zakaz@i-volga.com
+						span.ftext-16 400066, г. Волгоград, ул. Советская, д.25
 
-			nav.footer-nav
-				a.footer-nav__item(href="#") О клинике
-				a.footer-nav__item(href="#") Цены
-				a.footer-nav__item(href="#") специалисты
-				a.footer-nav__item(href="#") новости
-				a.footer-nav__item(href="#") контакты
-				a.footer-nav__item(href="#") документация
+				.footer__col.f-col-02.fcol-gap-16
+					.fcol-gap-8
+						span.ftext-14 Агенствам
+						a.ftext-18(href="tel:+79275102872") +7 (927) 510-28-72
+					.fcol-gap-8
+						span.ftext-14 Туристам
+						a.ftext-18(href="tel:+79275103043") +7 (927) 510-30-43
+				.footer__col.f-col-03.fcol-gap-10
+					span.ftext-14 График работы
+					.fcol-gap-10
+						p.ftext-16 Пн-Пт 10:00 — 19:00 
+							span (мск)
+						p.ftext-16 Сб 11:00 — 18:00 
+							span (мск)
+						p.ftext-16 Вс выходной
 
-			.footer-info
-				.footer-info__top
-					a.footer-logo(href="/verstka/") 
-						img.footer-logo__img(src="assets/images/footer-logo.png", alt="")
-					p.footer-descr Лечебно-реабилитационный центр «Исцеление» — психиатрическая и наркологическая помощь в Ростове-на-Дону. Работаем круглосуточно, анонимно.
-					a.btn.footer-btn(data-popup="callback") получить консультацию
-				.footer-phons
-					a.footer-phone(href="tel:+79885368511") +7 (988) 536 85 11
-					a.footer-phone(href="tel:+78002500810") 8 800 2500 810
-				.footer-social.soc-btns
-					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram")
-						svg.soc-btn__icon(aria-hidden="true") 
-							use(href="assets/icons/symbol/sprite.svg#tg")
-					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="VK")
-						svg.soc-btn__icon(aria-hidden="true") 
-							use(href="assets/icons/symbol/sprite.svg#vk")
-					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Max")
-						svg.soc-btn__icon(aria-hidden="true") 
-							use(href="assets/icons/symbol/sprite.svg#max")
-				.footer-text
-					.footer-text__block
-						p
-							span Режим работы:
-							| Круглосуточно
-						p
-							span Email:
-							a(href="mailto:info@center-iscelenie.ru") info@center-iscelenie.ru
-					.footer-text__block
-						p
-							span г. Ростов-на-Дону
-						p ул. Варфоломеева, 243
-						p ул. Герасименко 6/2
-			.footer-map
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aac5f6b6ab76cce2e1e4838e5a8cd89cd6792e0858b00c947270885b4d0e7219c&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
-			.footer-bottom
-				| Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Информация о ценах носит уведомительный характер. Стоимость медицинских услуг определяется после очной консультации у специалистов. Действующий прейскурант, заверенный печатью и подписью руководителя, находится на информационном стенде Клиники. Деятельность организации осуществляется на основании действующей лицензии, выданной Департаментом Здравоохранения РФ. Ссылка  на выписку из реестра.
-				.footer-bottom__box
-					.footer-bottom__list
-						span ООО «МПЦ «Исцеление»
-						span ИНН 6165101393
-						span ОГРН 1026103707838 от 23 июля 2002 г.
-					.footer-bottom__list
-						a(href="#") Политика конфиденциальности
-						a(href="#") Политика обработки персональных данных
+				.footer__col.f-col-04.fcol-gap-20
+					.fcol-gap-10
+						span.ftext-14 Наши соцсети
+						.footer__socbtns.soc-btns.soc-btns--footer
+							a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Max")
+								svg(aria-hidden="true").soc-btn__icon
+									use(href="assets/icons/symbol/sprite.svg#max-mono")
+
+							a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="VK")
+								svg(aria-hidden="true").soc-btn__icon
+									use(href="assets/icons/symbol/sprite.svg#vk-mono")
+
+							a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram")
+								svg(aria-hidden="true").soc-btn__icon
+									use(href="assets/icons/symbol/sprite.svg#tg-mono")
+		.footer__middle
+			nav.footer__grid
+				.footer__col.f-col-01.fcol-gap-14
+					a(href="#").ftext-16 Туры
+					a(href="#").ftext-16 Отели
+					a(href="#").ftext-16 Экскурсии
+					a(href="#").ftext-16 Билеты
+				.footer__col.f-col-02.fcol-gap-14
+					a(href="#").ftext-16 Автобусные туры
+					a(href="#").ftext-16 Прием в Волгограде
+					a(href="#").ftext-16 Волгоградским школьникам
+					a(href="#").ftext-16 Бронирование отелей
+				.footer__col.f-col-03.fcol-gap-14
+					a(href="#").ftext-16 Нужно четкое понимание разделов
+					a(href="#").ftext-16 Раздел
+					a(href="#").ftext-16 Раздел
+					a(href="#").ftext-16 Раздел
+				.footer__col.f-col-04.fcol-gap-14
+					a(href="#").ftext-16 О компании
+					a(href="#").ftext-16 Отзывы
+					a(href="#").ftext-16 Контакты
+					a(href="#").ftext-16 Как оплатить
+	.footer__bottom
+		.container
+			.footer__grid
+				.footer__col.f-col-01
+				.footer__col.f-col-02
+				.footer__col.f-col-03
+				.footer__col.f-col-04
