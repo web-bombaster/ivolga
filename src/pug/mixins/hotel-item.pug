@@ -1,0 +1,24 @@
+mixin hotel-item(image, badges, location, type, title, price, duration, link = '#')
+	a.hotel-item.swiper-slide(href=link)
+		.hotel-item__img
+			img(src=image, alt="")
+
+			if badges && badges.length
+				.hotel-item__badges.badges
+					each badge in badges
+						+badge-item(badge.text, badge.accent, badge.icon)
+
+			.hotel-item__tags.tags-tour
+				+tag-tour(location, 'geo')
+
+		.hotel-item__info
+			.hotel-item__title
+				| #{type}
+				span= title
+
+			.hotel-item__bottom
+				span.hotel-item__price= price
+				span.hotel-item__duration
+					svg.hotel-item__duration-icon(aria-hidden="true")
+						use(href="assets/icons/symbol/sprite.svg#moon2")
+					| #{duration}

@@ -3,6 +3,11 @@
 	padding-bottom: 60px;
 	background-color: var(--color-light-gray);
 	border-radius: 32px;
+
+	@media screen and (max-width: 768px) {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
 }
 
 .ideas__container {}
@@ -24,6 +29,10 @@
 
 	@media screen and (max-width: 992px) {
 		grid-template-columns: 1fr;
+	}
+
+	@media screen and (max-width: 600px) {
+		gap: 10px;
 	}
 }
 
@@ -78,6 +87,10 @@
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 12px;
+
+	@media screen and (max-width: 600px) {
+		padding: 0 12px;
+	}
 }
 
 .idea-item__top {
@@ -150,7 +163,11 @@
 
 .idea-item__btn {}
 
-.ideas-btn {
+.ideas-btn.ideas-btn {
 	grid-area: b;
 	align-self: center;
+
+	@media screen and (max-width: 600px) {
+		justify-content: space-between;
+	}
 }

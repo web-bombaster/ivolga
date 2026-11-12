@@ -5,11 +5,9 @@
 .faq-box {
 	display: flex;
 	justify-content: space-between;
-	gap: 32px;
 
 	@media screen and (max-width: 992px) {
 		flex-direction: column;
-		gap: 40px;
 	}
 }
 
@@ -34,6 +32,10 @@
 	flex-direction: column;
 	gap: 0;
 	transition: all .25s;
+
+	@media screen and (max-width: 768px) {
+		padding: 20px;
+	}
 
 	&.toggle {
 		gap: 16px;
@@ -77,6 +79,11 @@
 	height: 0;
 	opacity: 0;
 	overflow: hidden;
+
+	@media screen and (max-width: 768px) {
+		font-size: 15px;
+		line-height: 1.33333;
+	}
 
 	.toggle & {
 		opacity: 1;

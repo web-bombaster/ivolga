@@ -1,3 +1,4 @@
+include ../mixins/hotel-item.pug
 include ../mixins/tag-tour.pug
 include ../mixins/badge-item.pug
 
@@ -13,56 +14,79 @@ include ../mixins/badge-item.pug
 				.hotels__slider.swiper.js-hotels-slider
 					.hotels-list.swiper-wrapper
 
-						a.hotel-item.swiper-slide(href="#") 
-							.hotel-item__img
-								img(src="assets/images/hotels-01.jpg", alt="")
-								.hotel-item__badges.badges
-									.badge
-										svg.badge-icon(aria-hidden="true")
-											use(href="assets/icons/symbol/sprite.svg#lightning")
-										| -25%
-									.badge.badge--accent
-										| Рекомендуем
-								.hotel-item__tags.tags-tour
-									.tag-tour
-										svg.tag-tour__icon(aria-hidden="true")
-											use(href="assets/icons/symbol/sprite.svg#lightning")
-										| Абхазия Гагры
-							.hotel-item__info
-								.hotel-item__title
-									| Дом отдыха
-									span Апсны-Абазашта
-								.hotel-item__bottom
-									span.hotel-item__price от 14 880 ₽ / чел
-									span.hotel-item__duration
-										svg.hotel-item__duration-icon(aria-hidden="true")
-											use(href="assets/icons/symbol/sprite.svg#moon2")
-									
-										| 3 ночи
+						+hotel-item(
+							"assets/images/hotels-01.jpg",
+							[
+								{text: "-25%", icon: "lightning"},
+								{text: "Рекомендуем", accent: true}
+							],
+							"Абхазия Гагры",
+							"Дом отдыха",
+							"Апсны-Абазашта",
+							"от 14 880 ₽ / чел",
+							"3 ночи"
+						)
 
-						a.hotel-item.swiper-slide(href="#") 
-							.hotel-item__img
-								img(src="assets/images/hotels-02.jpg", alt="")
-								.hotel-item__badges.badges
-									.badge
-										| -25%
-								.hotel-item__tags.tags-tour
-									.tag-tour
-										svg.tag-tour__icon(aria-hidden="true")
-											use(href="assets/icons/symbol/sprite.svg#lightning")
-										| Сочи
-							.hotel-item__info
-								.hotel-item__title
-									| Гостиница
-									span Арстаа
-								.hotel-item__bottom
-									span.hotel-item__price от 7 850 ₽ / чел
-									span.hotel-item__duration
-										svg.hotel-item__duration-icon(aria-hidden="true")
-											use(href="assets/icons/symbol/sprite.svg#moon2")
-									
-										| 12 ночей
+						+hotel-item(
+							"assets/images/hotels-02.jpg",
+							[
+								{text: "-10%"}
+							],
+							"Сочи",
+							"Гостиница",
+							"Арстаа",
+							"от 7 850 ₽ / чел",
+							"12 ночей"
+						)
 
+						+hotel-item(
+							"assets/images/hotels-03.jpg",
+							[
+								{text: "Рекомендуем", accent: true }
+							],
+							"Абхазия Гагры",
+							"Отель",
+							"Багрипш",
+							"от 11 390 ₽ / чел",
+							"5 ночей"
+						)
+
+						+hotel-item(
+							"assets/images/hotels-04.jpg",
+							[
+								{text: "-10%"}
+							],
+							"Сочи",
+							"База отдыха",
+							"Холодная речка",
+							"от 34 900 ₽ / чел",
+							"7 ночей"
+						)
+
+						+hotel-item(
+							"assets/images/hotels-01.jpg",
+							[
+								{text: "Горящий", accent: true, icon: 'fire'}
+							],
+							"Сочи",
+							"Гостиница",
+							"Арстаа",
+							"от 7 850 ₽ / чел",
+							"12 ночей"
+						)
+
+						+hotel-item(
+							"assets/images/hotels-02.jpg",
+							[
+								{text: "-10%"}
+							],
+							"Сочи",
+							"Гостиница",
+							"Арстаа",
+							"от 7 850 ₽ / чел",
+							"12 ночей"
+						)
+						
 				.hotels__nav.slider-nav
 					.hotels__nav-box.slider-nav__box
 						.hotels__prev.slider-nav__prev

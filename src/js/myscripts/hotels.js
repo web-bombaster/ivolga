@@ -6,8 +6,8 @@ function hotelsSliderInit() {
 	}
 
 	new Swiper(hotelsSlider, {
-		slidesPerView: 1.1,
-		spaceBetween: 10,
+		slidesPerView: 1.2,
+		spaceBetween: 12,
 
 		navigation: {
 			prevEl: '.hotels__prev',
@@ -15,16 +15,16 @@ function hotelsSliderInit() {
 		},
 
 		breakpoints: {
-			// 460: {
-			// 	slidesPerView: 2.15,
-			// 	spaceBetween: 20,
-			// },
+			460: {
+				slidesPerView: 2.15,
+				spaceBetween: 12,
+			},
 			768: {
-				slidesPerView: 2,
+				slidesPerView: 3,
 				spaceBetween: 14,
 			},
 			993: {
-				slidesPerView: 3,
+				slidesPerView: 4,
 				spaceBetween: 14,
 			},
 			1300: {

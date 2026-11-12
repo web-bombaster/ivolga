@@ -4,7 +4,9 @@
 
 .hot-tours__box {}
 
-.hot-tours__slider {}
+.hot-tours__slider {
+	width: 100%;
+}
 
 .hot-tours__nav {}
 
@@ -20,6 +22,7 @@
 
 .hot-tours__slider-wrapper {
 	grid-area: c;
+	min-width: 0;
 }
 
 .hot-tours-list {
@@ -184,8 +187,9 @@
 
 .hot-tour__price {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: baseline;
-	gap: 8px;
+	gap: 4px 8px;
 	font-weight: 600;
 	font-size: 21px;
 	line-height: 1.38095;
@@ -202,8 +206,12 @@
 
 .hot-tour__btn {}
 
-.hot-tours__btn {
+.hot-tours__btn.hot-tours__btn {
 	grid-area: b;
+
+	@media screen and (max-width: 600px) {
+		justify-content: space-between;
+	}
 }
 
 .hot-tour__badges {

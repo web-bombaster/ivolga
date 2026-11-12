@@ -6,8 +6,8 @@ function hotToursSliderInit() {
 	}
 
 	new Swiper(hotToursSlider, {
-		slidesPerView: 1.1,
-		spaceBetween: 10,
+		slidesPerView: 1.2,
+		spaceBetween: 12,
 
 		navigation: {
 			prevEl: '.hot-tours__prev',
@@ -15,12 +15,12 @@ function hotToursSliderInit() {
 		},
 
 		breakpoints: {
-			// 460: {
-			// 	slidesPerView: 2.15,
-			// 	spaceBetween: 20,
-			// },
-			768: {
-				slidesPerView: 2,
+			460: {
+				slidesPerView: 1.4,
+				spaceBetween: 12,
+			},
+			620: {
+				slidesPerView: 2.15,
 				spaceBetween: 14,
 			},
 			993: {

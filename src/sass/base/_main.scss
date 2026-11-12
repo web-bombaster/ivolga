@@ -39,11 +39,7 @@ body {
 	max-width: calc(1312px + 30px * 2);
 
 	@media screen and (max-width: 992px) {
-		padding: 0 15px;
-	}
-
-	@media screen and (max-width: 768px) {
-		padding: 0 10px;
+		padding: 0 16px;
 	}
 }
 
@@ -112,6 +108,11 @@ input::placeholder {
 	font-size: 40px;
 	line-height: 1.2;
 	text-wrap: balance;
+
+	@media screen and (max-width: 768px) {
+		font-size: 26px;
+		line-height: 1.30769;
+	}
 }
 
 .h2 {
@@ -122,6 +123,11 @@ input::placeholder {
 	line-height: 1.11111;
 	text-wrap: balance;
 
+	@media screen and (max-width: 768px) {
+		font-size: 26px;
+		line-height: 1.30769;
+	}
+
 }
 
 .h3 {
@@ -130,6 +136,11 @@ input::placeholder {
 	font-size: 26px;
 	line-height: 1.23077;
 	color: var(--color-text);
+
+	@media screen and (max-width: 768px) {
+		font-size: 22px;
+		line-height: 1.27273;
+	}
 }
 
 .sections-column {
@@ -150,6 +161,10 @@ input::placeholder {
 	display: flex;
 	flex-direction: column;
 	gap: 38px;
+
+	@media screen and (max-width: 768px) {
+		gap: 24px;
+	}
 }
 
 .section-grid {
@@ -168,6 +183,7 @@ input::placeholder {
 			'b'
 		;
 		grid-template-columns: 1fr;
+		gap: 24px;
 	}
 }
 
