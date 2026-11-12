@@ -6,18 +6,43 @@
 	gap: 8px;
 }
 
-.soc-btns__item {}
-
 .soc-btn {
-	color: var(--color-gray);
 	display: inline-flex;
+	color: var(--color-gray);
 	@include hover-accent;
+	
+	.soc-btns--subscribe & {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all .25s;
+		border-radius: 12px;
+		background-color: #fff;
+		width: 48px;
+		height: 48px;
+
+		&:hover {
+			.soc-btn__icon {
+				color: var(--color-accent);
+			}
+		}
+	}
 }
 
 .soc-btn__icon {	
 	display: block;
+	transition: all 0.25s;
 	width: 20px;
 	height: 20px;
 	object-fit: contain;
 	object-position: center;
+
+	.soc-btns--subscribe & {
+		display: block;
+		width: 24px;
+		height: 24px;
+		object-fit: contain;
+		object-position: center;
+		color: var(--color-gray);
+	}
 }

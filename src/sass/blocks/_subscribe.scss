@@ -1,0 +1,160 @@
+.subscribe {
+}
+
+.subscribe__container {}
+
+.subscribe__box {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border-radius: 24px;
+	background-color: var(--color-light-gray);
+	overflow: hidden;
+	
+	@media screen and (max-width: 768px) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+.subscribe__info {
+	padding: 38px 36px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 28px;
+
+	@media screen and (max-width: 768px) {
+		padding: 20px;
+		gap: 24px;
+	}
+}
+
+.subscribe__top {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.subscribe__title {
+	margin: 0;
+}
+
+.subscribe__descr {
+	margin: 0;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.25;
+
+	@media screen and (max-width: 768px) {
+		font-size: 15px;
+		line-height: 1.33333;
+	}
+}
+
+.subscribe__socbtns {}
+
+.subscribe__img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 24px;
+	align-self: center;
+}
+
+.subscribe__form {}
+
+.subscribe-form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.subscribe-form__field {
+	display: flex;
+	gap: 8px;
+
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		gap: 12px;
+	}
+}
+
+.subscribe-form__input {
+	padding: 12px 16px;
+	flex-grow: 1;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.42857;
+	color: var(--color-text);
+	border-radius: 12px;
+	background-color: #fff;
+	border: none;
+
+	&::placeholder {
+		color: var(--color-gray);
+	}
+}
+
+.subscribe-form__btn {}
+
+.subscribe-form__agreement {}
+
+.subscribe-form__label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.subscribe-form__checkbox {
+	appearance: none;
+	flex-shrink: 0;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	border: 1px solid #666;
+	border-radius: 5px;
+	cursor: pointer;
+	position: relative;
+
+	&:checked {
+		background-color: #666;
+		border-color: #666;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 2px;
+			left: 6px;
+			width: 5px;
+			height: 10px;
+			border: solid #fff;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+		}
+	}
+
+	&:focus-visible {
+		outline: 2px solid #999;
+		outline-offset: 3px;
+	}
+}
+
+.subscribe-form__text {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1.33333;
+	color: var(--color-gray);
+	text-wrap: balance;
+
+	a {
+		color: var(--color-gray);
+		text-decoration: underline;
+		transition: all .25s;
+
+		&:hover {
+			color: var(--color-accent);
+		}
+	}
+}
+
+.subscribe-form__link {}

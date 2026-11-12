@@ -1,0 +1,47 @@
+.subscribe
+	.subscribe__container.container
+		.subscribe__box
+			.subscribe__info
+				.subscribe__top
+					h2.subscribe__title.h2 Колесим по России
+					p.subscribe__descr Подписывайся, чтобы получать свежие идеи для путешествий
+
+				form.subscribe__form.subscribe-form(action="#" method="post")
+					.subscribe-form__field
+						input.subscribe-form__input(
+							type="email"
+							name="email"
+							placeholder="Ваш e-mail"
+							autocomplete="email"
+							required
+						)
+
+						button.subscribe-form__btn.btn.btn-fill(type="submit") Подписаться
+
+					.subscribe-form__agreement
+						label.subscribe-form__label
+							input.subscribe-form__checkbox(
+								type="checkbox"
+								name="personal_data_agreement"
+								value="Y"
+								required
+							)
+							span.subscribe-form__text
+								| Даю 
+								a.subscribe-form__link(href="/agreement/" target="_blank") согласие
+								| &nbsp;на обработку персональных данных для получения информации об интересных местах, рекламы и выгодных приложений
+
+				.subscribe__socbtns.soc-btns.soc-btns--subscribe
+					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Max")
+						svg(aria-hidden="true").soc-btn__icon
+							use(href="assets/icons/symbol/sprite.svg#max-mono")
+
+					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="VK")
+						svg(aria-hidden="true").soc-btn__icon
+							use(href="assets/icons/symbol/sprite.svg#vk-mono")
+
+					a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram")
+						svg(aria-hidden="true").soc-btn__icon
+							use(href="assets/icons/symbol/sprite.svg#tg-mono")
+
+			img.subscribe__img(src="assets/images/subscribe.jpg", alt="")
