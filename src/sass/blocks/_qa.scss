@@ -7,8 +7,8 @@
 	align-items: center;
 	gap: 20px;
 	border-radius: 30px;
-	background: linear-gradient(94.88deg, #f3fef7 1.59%, #e9f3d3 80.32%, #c0ebd2 100%);
 	padding: 80px 64px;
+	background-color: #fff;
 
 	@media screen and (max-width: 992px) {
 		flex-direction: column;
@@ -21,7 +21,7 @@
 
 	.popup__body & {
 		flex-direction: column;
-		padding: 32px 20px;
+		padding: 32px;
 		max-width: 600px;
 		border-radius: 0;
 	}
@@ -30,15 +30,10 @@
 .qa-text {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
-
-	@media screen and (max-width: 768px) {
-		gap: 10px;
-	}
+	gap: 24px;
 
 	.popup__body & {
 		gap: 12px;
-		text-align: center;
 
 		.h1 {
 			@media screen and (max-width: 768px) {
@@ -46,6 +41,13 @@
 			}
 		}
 	}
+}
+
+.qa-title {
+	margin: 0;
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 1.23077;
 }
 
 .qa-descr {
@@ -63,9 +65,8 @@
 	display: flex;
 	flex-shrink: 0;
 	flex-direction: column;
-	gap: 8px;
+	gap: 12px;
 	width: 100%;
-	max-width: 362px;
 
 	@media screen and (max-width: 992px) {
 		max-width: initial;
@@ -73,23 +74,23 @@
 }
 
 .callback-form__input {
-	border: none;
-	border-radius: 100px;
-	background-color: #fff;
 	padding-right: 20px;
 	padding-left: 20px;
 	height: 48px;
-	color: #222;
+	color: var(--color-text);
 	font-weight: 400;
-	font-size: 18px;
-	line-height: 1.5;
+	font-size: 16px;
+	line-height: 1.25;
+	background-color: #fff;
+	border-radius: 12px;
+	border: 1px solid #eceae6;
 
 	@media screen and (max-width: 768px) {
 		font-size: 16px;
 	}
 
 	&::placeholder {
-		color: rgba(34, 34, 34, 0.5);
+		color: var(--color-text);
 	}
 }
 
@@ -109,19 +110,15 @@
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.5;
+	color: var(--color-gray);
 	
 	a {
-		color: rgba(34, 34, 34, 0.9);
+		color: var(--color-gray);
 	}
 }
 
 .callback-form__submit.callback-form__submit {
 	margin-top: 16px;
-	background-color: #a6cd50;
-
-	&:hover {
-		background-color: #90b345;
-	}
 }
 
 /* Кастомный квадрат */

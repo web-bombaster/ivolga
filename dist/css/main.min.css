@@ -2618,6 +2618,165 @@ button {
   color: var(--color-text);
 }
 
+.qa-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 30px;
+  padding: 80px 64px;
+  background-color: #fff;
+}
+@media screen and (max-width: 992px) {
+  .qa-box {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .qa-box {
+    background: linear-gradient(94.88deg, #f3fef7 21.43%, #e9f3d3 84.29%, #c0ebd2 100%);
+    padding: 40px 20px;
+  }
+}
+.popup__body .qa-box {
+  flex-direction: column;
+  padding: 32px;
+  max-width: 600px;
+  border-radius: 0;
+}
+
+.qa-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.popup__body .qa-text {
+  gap: 12px;
+}
+@media screen and (max-width: 768px) {
+  .popup__body .qa-text .h1 {
+    font-size: 24px;
+  }
+}
+
+.qa-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.23077;
+}
+
+.qa-descr {
+  margin: 0;
+  text-wrap: balance;
+}
+@media screen and (max-width: 768px) {
+  .popup__body .qa-descr {
+    font-size: 14px;
+  }
+}
+
+.callback-form {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .callback-form {
+    max-width: initial;
+  }
+}
+
+.callback-form__input {
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 48px;
+  color: var(--color-text);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #eceae6;
+}
+@media screen and (max-width: 768px) {
+  .callback-form__input {
+    font-size: 16px;
+  }
+}
+.callback-form__input::-moz-placeholder {
+  color: var(--color-text);
+}
+.callback-form__input::placeholder {
+  color: var(--color-text);
+}
+
+.callback-form__agreement {
+  margin-top: 2px;
+}
+
+.callback-form__checkbox {
+  display: flex;
+  gap: 10px;
+}
+
+.callback-form__checkbox-text {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-gray);
+}
+.callback-form__checkbox-text a {
+  color: var(--color-gray);
+}
+
+.callback-form__submit.callback-form__submit {
+  margin-top: 16px;
+}
+
+/* Кастомный квадрат */
+.checkbox__box {
+  position: relative;
+  flex: 0 0 20px;
+  transition: background-color 0.2s, border-color 0.2s;
+  border: 1px solid rgba(34, 34, 34, 0.3);
+  border-radius: 5px;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+/* Галочка */
+.checkbox__box::after {
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.2s;
+  border-right: 2px solid #222;
+  border-bottom: 2px solid #222;
+  width: 5px;
+  height: 9px;
+  content: "";
+}
+
+/* Состояние checked */
+.callback-form__checkbox-input:checked + .checkbox__box {
+  background: #fff;
+}
+
+.callback-form__checkbox-input:checked + .checkbox__box::after {
+  transform: rotate(45deg) scale(1);
+}
+
+/* Фокус с клавиатуры */
+.callback-form__checkbox-input:focus-visible + .checkbox__box {
+  outline: 2px solid #222;
+  outline-offset: 2px;
+}
+
 .btn {
   display: flex;
   justify-content: center;
