@@ -2,13 +2,13 @@
 function mobileMenu() {
 	if (document.querySelector(".jsMobileMenuBtnToggle")) {
 		const menuBtn = document.querySelector(".jsMobileMenuBtnToggle");
+		const menuCloseBtn = document.querySelector(".js-mobile-menu-close");
 		const body = document.querySelector("body");
 		const menu = document.querySelector(".mobile-menu");
 
 		function mobileMenuOpen() {
 			const heightViewport = document.documentElement.clientHeight; // высота вьюпорта
-			const heightHeader = document.querySelector('.header-top').offsetHeight; // высота хедера
-			const heightMenuOverlay = heightViewport - heightHeader; // высота оверлея меню
+			const heightMenuOverlay = heightViewport; // высота оверлея меню
 			menu.style.height = heightMenuOverlay + 'px';
 			menu.classList.add("toggle");
 			body.classList.add("toggle");
@@ -32,6 +32,7 @@ function mobileMenu() {
 		}
 
 		menuBtn.addEventListener("click", menuToggle);
+		menuCloseBtn.addEventListener("click", menuToggle);
 
 		window.addEventListener(
 			"resize",

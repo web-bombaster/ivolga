@@ -45,7 +45,7 @@
 	color: #222;
 
 	&:hover {
-		color: #0b684d;
+		color: var(--color-accent);
 	}
 
 	.menu__submenu & {

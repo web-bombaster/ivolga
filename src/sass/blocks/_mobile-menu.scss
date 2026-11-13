@@ -1,6 +1,7 @@
 @use "sass:math";
 
 .mobile-menu {
+	padding-top: 40px;
 	display: flex;
 	display: flex;
 	position: fixed;
@@ -20,6 +21,11 @@
 	@media screen and (max-width: 768px) {
 		max-width: 100%;
 	}
+
+	@media screen and (max-width: 600px) {
+		padding-top: 60px;
+		z-index: 99;
+	}
 	
 	&.toggle {
 		left: 0;
@@ -35,6 +41,20 @@
 			}
 		}
 	}
+}
+
+.mobile-menu__close {
+	position: absolute;
+	right: 4px;
+	top: 8px;
+	cursor: pointer;
+}
+.mobile-menu__close--icon {
+	display: block;
+	width: 26px;
+	height: 26px;
+	object-fit: contain;
+	object-position: center;
 }
 
 .mobile-menu__wrapper {
@@ -125,15 +145,6 @@
 
 .mobile-menu__box {}
 
-.mobile-menu__btn.mobile-menu__btn {
-	background-color: #a6cd50;
-	width: 100%;
-	font-size: 16px;
-
-	&:hover {
-		background-color: #90b345;
-	}
-}
 
 .mm-info {
 	display: flex;

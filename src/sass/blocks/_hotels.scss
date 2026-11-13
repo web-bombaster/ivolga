@@ -21,9 +21,13 @@
 
 .hotels__next {}
 
-.hotels__btn {
+.hotels__btn.hotels__btn {
 	grid-area: b;
 	align-self: start;
+
+	@media screen and (max-width: 600px) {
+		justify-content: space-between;
+	}
 }
 
 .hotels-top {

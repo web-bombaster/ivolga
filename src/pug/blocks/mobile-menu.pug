@@ -1,6 +1,6 @@
 .mobile-menu
 	
-	form.mobile-menu__search.mm-search(action='/search/' method='get')
+	//- form.mobile-menu__search.mm-search(action='/search/' method='get')
 		label.mm-search__label
 			span.visually-hidden Поиск по сайту
 			input.mm-search__input(type='search' name='q' placeholder='Услуга, направление, врач...')
@@ -9,7 +9,12 @@
 				use(href="assets/icons/symbol/sprite.svg#search")
 	
 	.mobile-menu__wrapper
+		button.mobile-menu__close.js-mobile-menu-close
+			svg(aria-hidden="true").mobile-menu__close--icon
+				use(href="assets/icons/symbol/sprite.svg#close")
+
 		.mobile-menu__wrapper-box
+
 			
 			//- .mobile-menu__box
 			include multi-level-menu
@@ -17,7 +22,7 @@
 			button.header-bottom__feedback.btn.mobile-menu__btn Заказать звонок
 			
 			.mobile-menu__info.mm-info
-			.header-top__work
+			//- .header-top__work
 				svg.header-top__work-time(aria-label="График работы")
 					use(href="assets/icons/symbol/sprite.svg#globe")
 				| Круглосуточно
@@ -28,15 +33,15 @@
 				p
 					span г. Ростов-на-Дону
 				p ул. Варфоломеева, 243
-				p ул. Герасименко 6/2
+				//- p ул. Герасименко 6/2
 
 			.mm-info__social.soc-btns
 				a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram")
 					svg.soc-btn__icon(aria-hidden="true") 
-						use(href="assets/icons/symbol/sprite.svg#tg")
+						use(href="assets/icons/symbol/sprite.svg#tg-mono")
 				a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="VK")
 					svg.soc-btn__icon(aria-hidden="true") 
-						use(href="assets/icons/symbol/sprite.svg#vk")
+						use(href="assets/icons/symbol/sprite.svg#vk-mono")
 				a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Max")
 					svg.soc-btn__icon(aria-hidden="true") 
-						use(href="assets/icons/symbol/sprite.svg#max")
+						use(href="assets/icons/symbol/sprite.svg#max-mono")

@@ -8,6 +8,80 @@
     <link href="css/main.min.css" rel="stylesheet">
   </head>
   <body id="top">
+    <header class="header">
+      <div class="header-top">
+        <div class="container header-top__container">
+          <div class="header-top__nav">
+            <ul class="top-nav">
+              <li class="top-nav__item top-nav__item--has-submenu"><a class="top-nav__link" href="#">О компании</a>
+                <div class="top-nav__submenu-box">
+                  <ul class="top-nav__submenu">
+                    <li class="top-nav__item"><a class="top-nav__link" href="#">Новости</a></li>
+                    <li class="top-nav__item"><a class="top-nav__link" href="#">Новости</a></li>
+                    <li class="top-nav__item"><a class="top-nav__link" href="#">Новости</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="top-nav__item"><a class="top-nav__link" href="#">Отзывы</a></li>
+              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="header-top__info">
+            <div class="header-top__phones ht-phones">
+              <div class="ht-phones__item"><span>Агентствам</span><a href="tel:+79885368511">+7 (988) 536 85 11</a></div>
+              <div class="ht-phones__item"><span>Агентствам</span><a href="tel:+79885368511">+7 (988) 536 85 11</a></div>
+            </div>
+            <div class="header-top__social soc-btns"><a class="soc-btns__item soc-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Max">
+                <svg class="soc-btn__icon" aria-hidden="true">
+                  <use href="assets/icons/symbol/sprite.svg#max-mono"></use>
+                </svg></a><a class="soc-btns__item soc-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="VK">
+                <svg class="soc-btn__icon" aria-hidden="true">
+                  <use href="assets/icons/symbol/sprite.svg#vk-mono"></use>
+                </svg></a><a class="soc-btns__item soc-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                <svg class="soc-btn__icon" aria-hidden="true">
+                  <use href="assets/icons/symbol/sprite.svg#tg-mono"></use>
+                </svg></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container header-bottom__container">
+          <div class="header-bottom__first"> 
+            <button class="header-bottom__burger burger jsMobileMenuBtnToggle" type="button" aria-label="Меню сайта"><span class="burger-line"></span></button><a class="header-bottom__logo" href="/verstka/"><img class="header-bottom__img" src="assets/images/logo.png" alt="Исцеление - медико-психологический центр"></a>
+          </div>
+          <nav class="header-bottom__nav">
+            <ul class="header-nav">
+              <li class="header-nav__item"><a class="header-nav__link" href="#">Автобусные туры</a></li>
+              <li class="header-nav__item"><a class="header-nav__link" href="#">Прием в Волгограде</a></li>
+              <li class="header-nav__item"><a class="header-nav__link" href="#">Волгоградским школьникам</a></li>
+              <li class="header-nav__item"><a class="header-nav__link" href="#">Бронирование отелей</a></li>
+            </ul>
+          </nav>
+          <button class="header-bottom__feedback btn" data-popup="callback">Получить консультацию</button>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-box">
+          <h1 class="h1 hero-title">Путешествия, туры и экскурсии из Волгограда</h1>
+          <div class="hero-tags"><span class="hero-tag"> 
+              <svg class="hero-tag__icon" aria-hidden="true">
+                <use href="assets/icons/symbol/sprite.svg#calendar-outline"></use>
+              </svg>С 2008 года с Вами</span><span class="hero-tag"> 
+              <svg class="hero-tag__icon" aria-hidden="true">
+                <use href="assets/icons/symbol/sprite.svg#globe"></use>
+              </svg>85+ направлений</span><span class="hero-tag"> 
+              <svg class="hero-tag__icon" aria-hidden="true">
+                <use href="assets/icons/symbol/sprite.svg#heart"></use>
+              </svg>98% туристов возвращаются</span><span class="hero-tag"> 
+              <svg class="hero-tag__icon" aria-hidden="true">
+                <use href="assets/icons/symbol/sprite.svg#rub"></use>
+              </svg>Честные цены</span></div>
+          <div class="hero-filter"></div>
+        </div>
+      </div>
+    </section>
     <div class="sections-column"> 
       <div class="hot-tours">
         <div class="hot-tours__container container">
@@ -660,7 +734,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__top">
-          <div class="footer__grid">
+          <div class="footer__grid footer__grid--contacts">
             <div class="footer__col f-col-01 fcol-gap-24"><a class="footer__logo" href="/"> <img class="footer__logo-img" src="assets/images/logo.png" alt=""></a>
               <div class="fcol-gap-14"><a class="ftext-18" href="mailto:zakaz@i-volga.com">zakaz@i-volga.com</a><span class="ftext-16">400066, г. Волгоград, ул. Советская, д.25</span></div>
             </div>
@@ -688,11 +762,15 @@
                       <use href="assets/icons/symbol/sprite.svg#tg-mono"></use>
                     </svg></a></div>
               </div>
+              <div class="tour-operators"><img class="tour-operators__img" src="assets/images/tour-operators.svg" alt="">
+                <div class="tour-operators__info"><span class="tour-operators__title">Мы в реестре туроператоров</span><span class="tour-operators__descr">
+                     ООО «Туристическая компания И‑Волга» <span>РТО 008863</span></span></div>
+              </div>
             </div>
           </div>
         </div>
         <div class="footer__middle">
-          <nav class="footer__grid">
+          <nav class="footer__grid footer__grid--nav">
             <div class="footer__col f-col-01 fcol-gap-14"><a class="ftext-16" href="#">Туры</a><a class="ftext-16" href="#">Отели</a><a class="ftext-16" href="#">Экскурсии</a><a class="ftext-16" href="#">Билеты</a></div>
             <div class="footer__col f-col-02 fcol-gap-14"><a class="ftext-16" href="#">Автобусные туры</a><a class="ftext-16" href="#">Прием в Волгограде</a><a class="ftext-16" href="#">Волгоградским школьникам</a><a class="ftext-16" href="#">Бронирование отелей</a></div>
             <div class="footer__col f-col-03 fcol-gap-14"><a class="ftext-16" href="#">Нужно четкое понимание разделов</a><a class="ftext-16" href="#">Раздел</a><a class="ftext-16" href="#">Раздел</a><a class="ftext-16" href="#">Раздел</a></div>
@@ -702,27 +780,29 @@
       </div>
       <div class="footer__bottom">
         <div class="container">
-          <div class="footer__grid">
-            <div class="footer__col f-col-01"></div>
-            <div class="footer__col f-col-02"></div>
-            <div class="footer__col f-col-03"></div>
-            <div class="footer__col f-col-04"></div>
+          <div class="footer__grid footer__grid--info">
+            <div class="footer__col f-col-01">
+              <div class="ftext-14">© 2008–2026 «Туристическая компания И-Волга»</div>
+            </div>
+            <div class="footer__col f-col-02">
+              <div class="ftext-14">
+                 ООО «Туристическая компания И-Волга»<br>ИНН 7720408332 / ОГРН 0000000000000</div>
+            </div>
+            <div class="footer__col f-col-03">
+              <div class="payment-systems"><img class="payment-systems__img" src="assets/images/visa.svg" alt=""><img class="payment-systems__img" src="assets/images/mir.svg" alt=""><img class="payment-systems__img" src="assets/images/mastercard.svg" alt=""><img class="payment-systems__img" src="assets/images/sbp.svg" alt=""></div>
+            </div>
+            <div class="footer__col f-col-04"><a class="ftext-14 polotic" href="#"> Политика конфиденциальности</a><img class="footer__runa" src="assets/images/runa.png" alt=""></div>
           </div>
         </div>
       </div>
     </footer>
     <div class="mobile-menu">
-      <form class="mobile-menu__search mm-search" action="/search/" method="get">
-        <label class="mm-search__label"><span class="visually-hidden">Поиск по сайту</span>
-          <input class="mm-search__input" type="search" name="q" placeholder="Услуга, направление, врач...">
-        </label>
-        <button class="mm-search__button" type="submit" aria-label="Найти">
-          <svg class="mm-search__icon" width="20" height="20" aria-hidden="true">
-            <use href="assets/icons/symbol/sprite.svg#search"></use>
+      <div class="mobile-menu__wrapper">
+        <button class="mobile-menu__close js-mobile-menu-close">
+          <svg class="mobile-menu__close--icon" aria-hidden="true">
+            <use href="assets/icons/symbol/sprite.svg#close"></use>
           </svg>
         </button>
-      </form>
-      <div class="mobile-menu__wrapper">
         <div class="mobile-menu__wrapper-box">
           <div class="mob-menu-wrapper">
             <nav class="menu">
@@ -800,26 +880,20 @@
           </div>
           <button class="header-bottom__feedback btn mobile-menu__btn">Заказать звонок</button>
           <div class="mobile-menu__info mm-info"></div>
-          <div class="header-top__work">
-            <svg class="header-top__work-time" aria-label="График работы">
-              <use href="assets/icons/symbol/sprite.svg#globe"></use>
-            </svg>Круглосуточно
-          </div>
           <div class="mm-info__phones"><a class="mm-info__phone" href="tel:+79885368511">+7 (988) 536 85 11</a><a class="mm-info__phone" href="tel:+78002500810">8 800 2500 810</a></div>
           <div class="mm-info__text">
             <p><span>г. Ростов-на-Дону</span></p>
             <p>ул. Варфоломеева, 243</p>
-            <p>ул. Герасименко 6/2</p>
           </div>
           <div class="mm-info__social soc-btns"><a class="soc-btns__item soc-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
               <svg class="soc-btn__icon" aria-hidden="true"> 
-                <use href="assets/icons/symbol/sprite.svg#tg"></use>
+                <use href="assets/icons/symbol/sprite.svg#tg-mono"></use>
               </svg></a><a class="soc-btns__item soc-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="VK">
               <svg class="soc-btn__icon" aria-hidden="true"> 
-                <use href="assets/icons/symbol/sprite.svg#vk"></use>
+                <use href="assets/icons/symbol/sprite.svg#vk-mono"></use>
               </svg></a><a class="soc-btns__item soc-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Max">
               <svg class="soc-btn__icon" aria-hidden="true"> 
-                <use href="assets/icons/symbol/sprite.svg#max"></use>
+                <use href="assets/icons/symbol/sprite.svg#max-mono"></use>
               </svg></a></div>
         </div>
       </div>

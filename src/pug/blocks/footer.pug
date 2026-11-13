@@ -1,7 +1,7 @@
 footer.footer
 	.container
 		.footer__top
-			.footer__grid
+			.footer__grid.footer__grid--contacts
 				.footer__col.f-col-01.fcol-gap-24
 					a.footer__logo(href="/") 
 						img.footer__logo-img(src="assets/images/logo.png", alt="")
@@ -40,8 +40,15 @@ footer.footer
 							a.soc-btns__item.soc-btn(href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram")
 								svg(aria-hidden="true").soc-btn__icon
 									use(href="assets/icons/symbol/sprite.svg#tg-mono")
+					.tour-operators
+						img.tour-operators__img(src="assets/images/tour-operators.svg", alt="")
+						.tour-operators__info
+							span.tour-operators__title Мы в реестре туроператоров
+							span.tour-operators__descr 
+								| ООО «Туристическая компания И‑Волга» 
+								span РТО 008863
 		.footer__middle
-			nav.footer__grid
+			nav.footer__grid.footer__grid--nav
 				.footer__col.f-col-01.fcol-gap-14
 					a(href="#").ftext-16 Туры
 					a(href="#").ftext-16 Отели
@@ -64,8 +71,20 @@ footer.footer
 					a(href="#").ftext-16 Как оплатить
 	.footer__bottom
 		.container
-			.footer__grid
+			.footer__grid.footer__grid--info
 				.footer__col.f-col-01
+					.ftext-14 © 2008–2026 «Туристическая компания И-Волга»
 				.footer__col.f-col-02
+					.ftext-14 
+						| ООО «Туристическая компания И-Волга»
+						br
+						| ИНН 7720408332 / ОГРН 0000000000000
 				.footer__col.f-col-03
+					.payment-systems
+						img.payment-systems__img(src="assets/images/visa.svg", alt="")
+						img.payment-systems__img(src="assets/images/mir.svg", alt="")
+						img.payment-systems__img(src="assets/images/mastercard.svg", alt="")
+						img.payment-systems__img(src="assets/images/sbp.svg", alt="")
 				.footer__col.f-col-04
+					a.ftext-14.polotic(href="#")  Политика конфиденциальности
+					img.footer__runa(src="assets/images/runa.png", alt="")
