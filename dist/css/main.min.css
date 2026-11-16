@@ -887,7 +887,6 @@ button {
 .hero {
   padding-top: 60px;
   padding-bottom: 60px;
-  overflow: hidden;
   background-image: url("../assets/images/hero.jpg");
   background-size: cover;
   background-position: center;
@@ -936,6 +935,702 @@ button {
   background-color: #fff;
 }
 
+.tour-search {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  color: var(--color-gray);
+}
+.tour-search *,
+.tour-search *::before,
+.tour-search *::after {
+  box-sizing: border-box;
+}
+.tour-search__inner {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 0.85fr 0.9fr;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+}
+.tour-search__field {
+  position: relative;
+  min-width: 0;
+  border-right: 1px solid #e5e5e5;
+}
+.tour-search__field:last-of-type {
+  border-right: 0;
+}
+.tour-search__field--destination {
+  z-index: 5;
+}
+.tour-search__field--date {
+  z-index: 4;
+}
+.tour-search__field--nights {
+  z-index: 3;
+}
+.tour-search__field--tourists {
+  z-index: 2;
+}
+.tour-search__control-wrap, .tour-search__control {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  padding: 15px 25px;
+}
+.tour-search__control {
+  justify-content: flex-start;
+  border: 0;
+  background: #fff;
+  color: #1a1a1a;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.tour-search__control:hover, .tour-search__control[aria-expanded=true] {
+  background: #e8eef1;
+}
+.tour-search__icon {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+}
+.tour-search__input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #1a1a1a;
+  font: inherit;
+}
+.tour-search__input::-moz-placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+.tour-search__input::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+.tour-search__input:focus::-moz-placeholder {
+  color: #ccc;
+}
+.tour-search__input:focus::placeholder {
+  color: #ccc;
+}
+.tour-search__input--destination {
+  cursor: text;
+}
+.tour-search__value {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tour-search__clear {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.tour-search__clear svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #9aabb2;
+  stroke-width: 2;
+}
+.tour-search__clear:hover svg {
+  stroke: #f7941d;
+}
+.tour-search__clear[hidden] {
+  display: none;
+}
+.tour-search__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  padding: 15px 25px;
+  border: 0;
+  border-radius: 0 6px 6px 0;
+  background: #f7941d;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.tour-search__submit:hover {
+  background: rgb(232.0846153846, 130.4192307692, 8.2153846154);
+}
+.tour-search__submit:active {
+  background: rgb(207.4564102564, 116.5794871795, 7.3435897436);
+}
+.tour-search__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.tour-search__dropdown[hidden] {
+  display: none;
+}
+.tour-search__dropdown--destination {
+  width: 100%;
+  min-width: 350px;
+  max-height: 460px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #bbb transparent;
+}
+.tour-search__dropdown--destination::-webkit-scrollbar {
+  width: 10px;
+}
+.tour-search__dropdown--destination::-webkit-scrollbar-track {
+  background: transparent;
+}
+.tour-search__dropdown--destination::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #bbb;
+}
+.tour-search__destination-list {
+  padding: 0 0 15px;
+}
+.tour-search__group {
+  padding: 0 25px;
+}
+.tour-search__group:first-child {
+  padding-top: 5px;
+}
+.tour-search__group-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px -25px 15px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.tour-search__group-title::before, .tour-search__group-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e5e5;
+}
+.tour-search__option {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 53px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.tour-search__option:hover {
+  color: #f7941d;
+}
+.tour-search__option[hidden] {
+  display: none;
+}
+.tour-search__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+.tour-search__checkbox:checked + .tour-search__checkbox-custom {
+  border-color: #f7941d;
+  background: #f7941d;
+}
+.tour-search__checkbox:checked + .tour-search__checkbox-custom::after {
+  opacity: 1;
+}
+.tour-search__checkbox:focus-visible + .tour-search__checkbox-custom {
+  outline: 2px solid rgba(245, 169, 0, 0.4);
+  outline-offset: 3px;
+}
+.tour-search__checkbox-custom {
+  position: relative;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c9cdd0;
+  border-radius: 3px;
+  background: #fafafa;
+  transition: background 0.2s, border-color 0.2s;
+}
+.tour-search__checkbox-custom::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  width: 7px;
+  height: 12px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+.tour-search__option-name {
+  color: #1a1a1a;
+}
+.tour-search__option-country {
+  margin-left: -10px;
+  color: #666;
+}
+.tour-search__dropdown--date {
+  left: 50%;
+  width: 900px;
+  transform: translateX(-50%);
+}
+.tour-search__date-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 65px;
+  padding: 15px 25px;
+  background: #e8eef1;
+}
+.tour-search__date-description {
+  font-weight: 600;
+}
+.tour-search__flexible {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tour-search__radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+.tour-search__radio:checked + .tour-search__radio-custom {
+  border-color: #f7941d;
+  background: #f7941d;
+}
+.tour-search__radio:checked + .tour-search__radio-custom::after {
+  opacity: 1;
+}
+.tour-search__radio:checked + .tour-search__radio-custom::after {
+  opacity: 1;
+}
+.tour-search__radio:focus-visible + .tour-search__radio-custom {
+  outline: 2px solid rgba(245, 169, 0, 0.4);
+  outline-offset: 3px;
+}
+.tour-search__radio-custom {
+  position: relative;
+  flex: 0 0 27px;
+  width: 27px;
+  height: 27px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background: #fff;
+}
+.tour-search__radio-custom::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  width: 6px;
+  height: 11px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+.tour-search__calendar {
+  padding: 20px 30px 25px;
+}
+.tour-search__calendar-months {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.tour-search__month {
+  min-width: 0;
+}
+.tour-search__month-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.tour-search__month-title {
+  flex: 1;
+  font-weight: 700;
+  text-align: center;
+}
+.tour-search__month-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  padding: 5px;
+  border: 0;
+  background: transparent;
+  color: #f7941d;
+  cursor: pointer;
+}
+.tour-search__month-arrow svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+.tour-search__month-arrow:hover {
+  color: rgb(217.3076923077, 122.1153846154, 7.6923076923);
+}
+.tour-search__weekdays, .tour-search__days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  text-align: center;
+}
+.tour-search__weekdays {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+  color: #777;
+}
+.tour-search__weekdays span:nth-last-child(-n+2) {
+  color: #c54a2d;
+}
+.tour-search__days {
+  grid-auto-rows: 57px;
+  padding-top: 5px;
+}
+.tour-search__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #1a1a1a;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.tour-search__day:hover:not(:disabled) {
+  background: #fff1d0;
+}
+.tour-search__day--selected {
+  background: #f7941d;
+  color: #fff;
+}
+.tour-search__day--selected:hover {
+  background: rgb(232.0846153846, 130.4192307692, 8.2153846154);
+}
+.tour-search__day--today {
+  border: 1px solid #f7941d;
+}
+.tour-search__day--disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+.tour-search__day:disabled {
+  cursor: not-allowed;
+}
+.tour-search__day-empty {
+  pointer-events: none;
+}
+.tour-search__dropdown--nights {
+  width: 390px;
+  padding: 25px;
+}
+.tour-search__nights-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.tour-search__counter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+.tour-search__counter-title {
+  font-weight: 600;
+}
+.tour-search__counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 45px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+.tour-search__counter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f7941d;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.tour-search__counter-btn:hover {
+  background: #fff4dd;
+}
+.tour-search__counter-btn:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+.tour-search__counter-value {
+  width: 40px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #1a1a1a;
+  font: inherit;
+  font-weight: 600;
+  text-align: center;
+}
+.tour-search__counter-value::-webkit-inner-spin-button, .tour-search__counter-value::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.tour-search__counter-value {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.tour-search__nights-info {
+  margin-top: 25px;
+  padding: 15px;
+  background: #e8eef1;
+  color: #666;
+  line-height: 1.5;
+}
+.tour-search__nights-info span {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+.tour-search__dropdown--tourists {
+  width: 340px;
+  padding: 25px;
+}
+.tour-search__tourists-group + .tour-search__tourists-group {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+.tour-search__tourists-title {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.tour-search__choices {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.tour-search__choice {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.tour-search__choice input:checked + .tour-search__choice-label {
+  border-color: #f7941d;
+  background: #f7941d;
+  color: #fff;
+}
+.tour-search__choice input:focus-visible + .tour-search__choice-label {
+  outline: 2px solid rgba(245, 169, 0, 0.4);
+  outline-offset: 3px;
+}
+.tour-search__choice-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  background: #fff;
+  color: #1a1a1a;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.tour-search__choice-label:hover {
+  border-color: #f7941d;
+}
+
+@media (max-width: 1200px) {
+  .tour-search__inner {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .tour-search__field--destination {
+    grid-column: span 2;
+  }
+  .tour-search__field--tourists {
+    border-right: 0;
+  }
+  .tour-search__submit {
+    grid-column: span 4;
+    min-height: 65px;
+    border-radius: 0 0 6px 6px;
+  }
+  .tour-search__control-wrap, .tour-search__control {
+    min-height: 80px;
+    padding: 12px 18px;
+    gap: 12px;
+  }
+  .tour-search__icon {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
+  .tour-search__input, .tour-search__control {
+    font-size: 14px;
+  }
+  .tour-search__field.is-active > .tour-search__control-wrap,
+  .tour-search__field.is-active > .tour-search__control {
+    background: #e8eef1;
+  }
+  .tour-search__field--destination.is-active {
+    background: #e8eef1;
+  }
+  .tour-search__group[hidden] {
+    display: none;
+  }
+  .tour-search__option[hidden] {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .tour-search__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .tour-search__field {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .tour-search__control-wrap, .tour-search__control {
+    min-height: 65px;
+    padding: 12px 16px;
+  }
+  .tour-search__input, .tour-search__control {
+    font-size: 14px;
+  }
+  .tour-search__icon {
+    flex-basis: 28px;
+    width: 28px;
+    height: 28px;
+  }
+  .tour-search__submit {
+    min-height: 60px;
+    border-radius: 0 0 6px 6px;
+  }
+  .tour-search__dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    transform: none;
+  }
+  .tour-search__dropdown--destination {
+    max-height: 350px;
+  }
+  .tour-search__dropdown--date {
+    overflow-x: auto;
+  }
+  .tour-search__date-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+  .tour-search__date-description {
+    font-size: 14px;
+  }
+  .tour-search__flexible {
+    font-size: 14px;
+  }
+  .tour-search__calendar {
+    min-width: 600px;
+    padding: 15px;
+  }
+  .tour-search__calendar-months {
+    gap: 12px;
+  }
+  .tour-search__month-title {
+    font-size: 14px;
+  }
+  .tour-search__days {
+    grid-auto-rows: 45px;
+  }
+  .tour-search__day {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+  .tour-search__weekdays {
+    font-size: 14px;
+  }
+  .tour-search__option {
+    font-size: 14px;
+  }
+  .tour-search__checkbox-custom {
+    flex-basis: 25px;
+    width: 25px;
+    height: 25px;
+  }
+  .tour-search__dropdown--nights {
+    padding: 18px;
+  }
+  .tour-search__dropdown--tourists {
+    padding: 18px;
+  }
+}
 .selected-tours {
   overflow: hidden;
 }

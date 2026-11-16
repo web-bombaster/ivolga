@@ -1,8 +1,8 @@
+@use "sass:color";
+
 .hero {
 	padding-top: 60px;
 	padding-bottom: 60px;
-	// border-radius: 32px;
-	overflow: hidden;
 	background-image: url('../assets/images/hero.jpg');
 	background-size: cover;
 	background-position: center;
