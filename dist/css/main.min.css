@@ -2350,7 +2350,7 @@ button {
   max-height: calc(100vh - 40px);
   overflow-y: auto;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 24px;
   /*
       * Начальное состояние анимации.
       */
@@ -2621,9 +2621,8 @@ button {
 .qa-box {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
   border-radius: 30px;
-  padding: 80px 64px;
   background-color: #fff;
 }
 @media screen and (max-width: 992px) {
@@ -2631,10 +2630,9 @@ button {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .qa-box {
-    background: linear-gradient(94.88deg, #f3fef7 21.43%, #e9f3d3 84.29%, #c0ebd2 100%);
-    padding: 40px 20px;
+    gap: 20px;
   }
 }
 .popup__body .qa-box {
@@ -2642,6 +2640,11 @@ button {
   padding: 32px;
   max-width: 600px;
   border-radius: 0;
+}
+@media screen and (max-width: 600px) {
+  .popup__body .qa-box {
+    padding: 20px;
+  }
 }
 
 .qa-text {
@@ -2655,6 +2658,18 @@ button {
 @media screen and (max-width: 768px) {
   .popup__body .qa-text .h1 {
     font-size: 24px;
+  }
+}
+
+.qa-img {
+  display: block;
+  height: 100px;
+  width: auto;
+  align-self: flex-start;
+}
+@media screen and (max-width: 600px) {
+  .qa-img {
+    height: 80px;
   }
 }
 
