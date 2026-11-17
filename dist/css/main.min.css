@@ -436,7 +436,6 @@ body {
   word-wrap: break-word;
   background-color: #fff;
   overflow-x: hidden;
-  letter-spacing: -0.029em;
 }
 body.toggle {
   overflow-y: hidden;
@@ -898,11 +897,16 @@ button {
 }
 
 .hero-tags {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .hero-tags {
+    margin-bottom: 20px;
+  }
 }
 
 .hero-tag {
@@ -916,6 +920,12 @@ button {
   font-size: 14px;
   line-height: 1.28571;
   color: var(--color-text);
+}
+@media screen and (max-width: 768px) {
+  .hero-tag {
+    font-size: 13px;
+    line-height: 1.23077;
+  }
 }
 
 .hero-tag__icon {
@@ -931,13 +941,19 @@ button {
 .hero-filter {
   border-radius: 24px;
   padding: 28px;
-  height: 258px;
   background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .hero-filter {
+    padding: 16px;
+    padding-bottom: 32px;
+  }
 }
 
 .tour-search {
+  margin-bottom: 24px;
   position: relative;
-  z-index: 10;
+  z-index: 8;
   width: 100%;
   font-family: inherit;
   font-size: 14px;
@@ -945,52 +961,98 @@ button {
   color: #1a1a1a;
   color: var(--color-gray);
 }
+@media screen and (max-width: 768px) {
+  .tour-search {
+    margin-bottom: 20px;
+  }
+}
 .tour-search *,
 .tour-search *::before,
 .tour-search *::after {
   box-sizing: border-box;
 }
+
 .tour-search__inner {
   display: grid;
-  grid-template-columns: 1.25fr 1fr 1fr 0.85fr 0.9fr;
-  align-items: stretch;
+  grid-template-columns: 268px 268px 268px 268px 1fr;
+  align-items: end;
+  gap: 8px;
   width: 100%;
-  min-height: 100px;
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
 }
+@media screen and (max-width: 1380px) {
+  .tour-search__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tour-search__field-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media screen and (max-width: 768px) {
+  .tour-search__field-box.f-01 {
+    grid-column: 1/span 2;
+  }
+  .tour-search__field-box.f-04 {
+    grid-column: 1/span 2;
+  }
+}
+
+.tour-search__field-name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  text-wrap: balance;
+  color: var(--color-text);
+}
+@media screen and (max-width: 768px) {
+  .tour-search__field-name {
+    font-size: 13px;
+    line-height: 1.23077;
+  }
+}
+
 .tour-search__field {
   position: relative;
   min-width: 0;
-  border-right: 1px solid #e5e5e5;
+  border: 1px solid #eceae6;
+  border-radius: 12px;
 }
-.tour-search__field:last-of-type {
-  border-right: 0;
-}
+
 .tour-search__field--destination {
   z-index: 5;
 }
+.tour-search__field--destination .tour-search__icon {
+  display: none;
+}
+
 .tour-search__field--date {
   z-index: 4;
 }
+
 .tour-search__field--nights {
   z-index: 3;
 }
+
 .tour-search__field--tourists {
   z-index: 2;
 }
-.tour-search__control-wrap, .tour-search__control {
+
+.tour-search__control-wrap,
+.tour-search__control {
   display: flex;
   align-items: center;
   gap: 18px;
   width: 100%;
   height: 100%;
-  min-height: 100px;
-  padding: 15px 25px;
+  padding: 14px 16px;
+  border-radius: 12px;
 }
+
 .tour-search__control {
-  justify-content: flex-start;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   border: 0;
   background: #fff;
   color: #1a1a1a;
@@ -1002,11 +1064,14 @@ button {
 .tour-search__control:hover, .tour-search__control[aria-expanded=true] {
   background: #e8eef1;
 }
+
 .tour-search__icon {
-  flex: 0 0 40px;
-  width: 40px;
-  height: 40px;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  color: var(--color-text);
 }
+
 .tour-search__input {
   display: block;
   width: 100%;
@@ -1015,7 +1080,7 @@ button {
   border: 0;
   outline: none;
   background: transparent;
-  color: #1a1a1a;
+  color: var(--color-text);
   font: inherit;
 }
 .tour-search__input::-moz-placeholder {
@@ -1032,15 +1097,19 @@ button {
 .tour-search__input:focus::placeholder {
   color: #ccc;
 }
+
 .tour-search__input--destination {
   cursor: text;
+  order: -1;
 }
+
 .tour-search__value {
   display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
 .tour-search__clear {
   flex: 0 0 24px;
   width: 24px;
@@ -1053,51 +1122,31 @@ button {
 .tour-search__clear svg {
   width: 100%;
   height: 100%;
-  fill: none;
-  stroke: #9aabb2;
-  stroke-width: 2;
-}
-.tour-search__clear:hover svg {
-  stroke: #f7941d;
 }
 .tour-search__clear[hidden] {
-  display: none;
-}
-.tour-search__submit {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 100px;
-  padding: 15px 25px;
-  border: 0;
-  border-radius: 0 6px 6px 0;
-  background: #f7941d;
-  color: #fff;
-  font: inherit;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: background 0.2s;
 }
-.tour-search__submit:hover {
-  background: rgb(232.0846153846, 130.4192307692, 8.2153846154);
+
+@media screen and (max-width: 1380px) {
+  .tour-search__submit {
+    grid-column: 1/span 2;
+  }
 }
-.tour-search__submit:active {
-  background: rgb(207.4564102564, 116.5794871795, 7.3435897436);
-}
+
 .tour-search__dropdown {
   position: absolute;
   top: 100%;
+  top: calc(100% + 8px);
   left: 0;
   z-index: 20;
   background: #fff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
 }
 .tour-search__dropdown[hidden] {
   display: none;
 }
+
 .tour-search__dropdown--destination {
   width: 100%;
   min-width: 350px;
@@ -1116,15 +1165,18 @@ button {
   border-radius: 10px;
   background: #bbb;
 }
+
 .tour-search__destination-list {
   padding: 0 0 15px;
 }
+
 .tour-search__group {
   padding: 0 25px;
 }
 .tour-search__group:first-child {
   padding-top: 5px;
 }
+
 .tour-search__group-title {
   display: flex;
   align-items: center;
@@ -1140,11 +1192,11 @@ button {
   height: 1px;
   background: #e5e5e5;
 }
+
 .tour-search__option {
   display: flex;
   align-items: center;
-  gap: 15px;
-  min-height: 53px;
+  gap: 8px;
   padding: 5px 0;
   cursor: pointer;
 }
@@ -1154,6 +1206,7 @@ button {
 .tour-search__option[hidden] {
   display: none;
 }
+
 .tour-search__checkbox {
   position: absolute;
   width: 1px;
@@ -1172,11 +1225,12 @@ button {
   outline: 2px solid rgba(245, 169, 0, 0.4);
   outline-offset: 3px;
 }
+
 .tour-search__checkbox-custom {
   position: relative;
-  flex: 0 0 30px;
-  width: 30px;
-  height: 30px;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
   border: 1px solid #c9cdd0;
   border-radius: 3px;
   background: #fafafa;
@@ -1185,8 +1239,8 @@ button {
 .tour-search__checkbox-custom::after {
   content: "";
   position: absolute;
-  top: 6px;
-  left: 10px;
+  top: 0;
+  left: 5px;
   width: 7px;
   height: 12px;
   border-right: 2px solid #fff;
@@ -1194,30 +1248,36 @@ button {
   transform: rotate(45deg);
   opacity: 0;
 }
+
 .tour-search__option-name {
-  color: #1a1a1a;
+  color: var(--color-text);
 }
+
 .tour-search__option-country {
-  margin-left: -10px;
-  color: #666;
+  color: var(--color-accent);
 }
+
 .tour-search__dropdown--date {
   left: 50%;
-  width: 900px;
+  width: 560px;
   transform: translateX(-50%);
+  border-radius: 12px;
 }
+
 .tour-search__date-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  min-height: 65px;
   padding: 15px 25px;
   background: #e8eef1;
+  border-radius: 12px 12px 0 0;
 }
+
 .tour-search__date-description {
   font-weight: 600;
 }
+
 .tour-search__flexible {
   display: flex;
   align-items: center;
@@ -1226,6 +1286,7 @@ button {
   font-weight: 600;
   cursor: pointer;
 }
+
 .tour-search__radio {
   position: absolute;
   width: 1px;
@@ -1240,13 +1301,11 @@ button {
 .tour-search__radio:checked + .tour-search__radio-custom::after {
   opacity: 1;
 }
-.tour-search__radio:checked + .tour-search__radio-custom::after {
-  opacity: 1;
-}
 .tour-search__radio:focus-visible + .tour-search__radio-custom {
   outline: 2px solid rgba(245, 169, 0, 0.4);
   outline-offset: 3px;
 }
+
 .tour-search__radio-custom {
   position: relative;
   flex: 0 0 27px;
@@ -1268,17 +1327,21 @@ button {
   transform: rotate(45deg);
   opacity: 0;
 }
+
 .tour-search__calendar {
-  padding: 20px 30px 25px;
+  padding: 20px 25px 25px;
 }
+
 .tour-search__calendar-months {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
+
 .tour-search__month {
   min-width: 0;
 }
+
 .tour-search__month-header {
   display: flex;
   align-items: center;
@@ -1286,11 +1349,13 @@ button {
   min-height: 42px;
   border-bottom: 1px solid #e5e5e5;
 }
+
 .tour-search__month-title {
   flex: 1;
   font-weight: 700;
   text-align: center;
 }
+
 .tour-search__month-arrow {
   display: flex;
   align-items: center;
@@ -1307,36 +1372,38 @@ button {
 .tour-search__month-arrow svg {
   width: 25px;
   height: 25px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
 }
 .tour-search__month-arrow:hover {
   color: rgb(217.3076923077, 122.1153846154, 7.6923076923);
 }
-.tour-search__weekdays, .tour-search__days {
+
+.tour-search__weekdays,
+.tour-search__days {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   text-align: center;
 }
+
 .tour-search__weekdays {
-  padding: 12px 0;
+  padding: 6px 0;
   border-bottom: 1px solid #e5e5e5;
   color: #777;
 }
 .tour-search__weekdays span:nth-last-child(-n+2) {
   color: #c54a2d;
 }
+
 .tour-search__days {
-  grid-auto-rows: 57px;
+  grid-auto-rows: 36px;
   padding-top: 5px;
 }
+
 .tour-search__day {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   margin: auto;
   padding: 0;
   border: 0;
@@ -1367,29 +1434,34 @@ button {
 .tour-search__day:disabled {
   cursor: not-allowed;
 }
+
 .tour-search__day-empty {
   pointer-events: none;
 }
+
 .tour-search__dropdown--nights {
   width: 390px;
   padding: 25px;
 }
+
 .tour-search__nights-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 25px;
 }
+
 .tour-search__counter-group {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 12px;
   flex: 1;
 }
+
 .tour-search__counter-title {
   font-weight: 600;
 }
+
 .tour-search__counter {
   display: flex;
   align-items: center;
@@ -1399,6 +1471,7 @@ button {
   border: 1px solid #e5e5e5;
   border-radius: 4px;
 }
+
 .tour-search__counter-btn {
   display: flex;
   align-items: center;
@@ -1419,6 +1492,7 @@ button {
   color: #ccc;
   cursor: not-allowed;
 }
+
 .tour-search__counter-value {
   width: 40px;
   min-width: 0;
@@ -1441,35 +1515,40 @@ button {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
 .tour-search__nights-info {
-  margin-top: 25px;
+  margin-top: 16px;
   padding: 15px;
   background: #e8eef1;
   color: #666;
   line-height: 1.5;
+  border-radius: 12px;
 }
 .tour-search__nights-info span {
   color: #1a1a1a;
   font-weight: 600;
 }
+
 .tour-search__dropdown--tourists {
   width: 340px;
   padding: 25px;
 }
+
 .tour-search__tourists-group + .tour-search__tourists-group {
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 1px solid #e5e5e5;
+  margin-top: 10px;
 }
+
 .tour-search__tourists-title {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
+
 .tour-search__choices {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+
 .tour-search__choice {
   position: relative;
   display: block;
@@ -1484,6 +1563,7 @@ button {
   outline: 2px solid rgba(245, 169, 0, 0.4);
   outline-offset: 3px;
 }
+
 .tour-search__choice-label {
   display: flex;
   align-items: center;
@@ -1500,31 +1580,13 @@ button {
 }
 
 @media (max-width: 1200px) {
-  .tour-search__inner {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-  .tour-search__field--destination {
-    grid-column: span 2;
-  }
-  .tour-search__field--tourists {
-    border-right: 0;
-  }
-  .tour-search__submit {
-    grid-column: span 4;
-    min-height: 65px;
-    border-radius: 0 0 6px 6px;
-  }
-  .tour-search__control-wrap, .tour-search__control {
-    min-height: 80px;
+  .tour-search__control-wrap,
+  .tour-search__control {
     padding: 12px 18px;
     gap: 12px;
   }
-  .tour-search__icon {
-    flex-basis: 32px;
-    width: 32px;
-    height: 32px;
-  }
-  .tour-search__input, .tour-search__control {
+  .tour-search__input,
+  .tour-search__control {
     font-size: 14px;
   }
   .tour-search__field.is-active > .tour-search__control-wrap,
@@ -1534,38 +1596,19 @@ button {
   .tour-search__field--destination.is-active {
     background: #e8eef1;
   }
-  .tour-search__group[hidden] {
-    display: none;
-  }
+  .tour-search__group[hidden],
   .tour-search__option[hidden] {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  .tour-search__inner {
-    display: flex;
-    flex-direction: column;
-  }
-  .tour-search__field {
-    width: 100%;
-    border-right: 0;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  .tour-search__control-wrap, .tour-search__control {
-    min-height: 65px;
+  .tour-search__control-wrap,
+  .tour-search__control {
     padding: 12px 16px;
   }
-  .tour-search__input, .tour-search__control {
+  .tour-search__input,
+  .tour-search__control {
     font-size: 14px;
-  }
-  .tour-search__icon {
-    flex-basis: 28px;
-    width: 28px;
-    height: 28px;
-  }
-  .tour-search__submit {
-    min-height: 60px;
-    border-radius: 0 0 6px 6px;
   }
   .tour-search__dropdown {
     position: absolute;
@@ -1589,9 +1632,7 @@ button {
     gap: 12px;
     padding: 15px;
   }
-  .tour-search__date-description {
-    font-size: 14px;
-  }
+  .tour-search__date-description,
   .tour-search__flexible {
     font-size: 14px;
   }
@@ -1613,24 +1654,133 @@ button {
     height: 38px;
     font-size: 14px;
   }
-  .tour-search__weekdays {
-    font-size: 14px;
-  }
+  .tour-search__weekdays,
   .tour-search__option {
     font-size: 14px;
   }
-  .tour-search__checkbox-custom {
-    flex-basis: 25px;
-    width: 25px;
-    height: 25px;
-  }
-  .tour-search__dropdown--nights {
-    padding: 18px;
-  }
+  .tour-search__dropdown--nights,
   .tour-search__dropdown--tourists {
     padding: 18px;
   }
 }
+.ht-item {
+  padding: 10px 16px;
+  width: auto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  white-space: nowrap;
+  color: var(--color-gray);
+  border-radius: 24px;
+  background-color: var(--color-light-gray);
+  transition: all 0.25s;
+}
+@media screen and (max-width: 768px) {
+  .ht-item {
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.23077;
+  }
+}
+.ht-item:hover, .ht-item.ht-item--active {
+  color: #fff;
+  background-color: var(--color-accent);
+}
+
+.hero-flist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.flist-item {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  width: initial;
+  border-radius: 24px;
+  transition: all 0.25s;
+}
+@media screen and (max-width: 768px) {
+  .flist-item {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+}
+.flist-item:hover, .flist-item.flist-item--active {
+  background-color: rgba(247, 148, 29, 0.11);
+}
+.flist-item:hover .flist-item__count, .flist-item.flist-item--active .flist-item__count {
+  background-color: #fff;
+  color: #c66b00;
+}
+
+.flist-item__icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+@media screen and (max-width: 768px) {
+  .flist-item__icon {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.flist-item__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  text-wrap: balance;
+  color: var(--color-text);
+}
+@media screen and (max-width: 768px) {
+  .flist-item__name {
+    font-size: 13px;
+    line-height: 1.23077;
+  }
+}
+
+.flist-item__count {
+  padding: 3px 8px 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: #c66b00;
+  border-radius: 10px;
+  background-color: rgba(247, 148, 29, 0.11);
+}
+@media screen and (max-width: 768px) {
+  .flist-item__count {
+    line-height: 1;
+  }
+}
+
+.flist-pagination__box {
+  position: relative;
+}
+
+.flist-pagination.flist-pagination {
+  position: absolute;
+  bottom: initial;
+  top: 4px;
+}
+@media screen and (max-width: 768px) {
+  .flist-pagination.flist-pagination {
+    top: 12px;
+  }
+}
+.flist-pagination.flist-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-accent);
+}
+
 .selected-tours {
   overflow: hidden;
 }

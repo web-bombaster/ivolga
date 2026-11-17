@@ -79,188 +79,254 @@
                 <use href="assets/icons/symbol/sprite.svg#rub"></use>
               </svg>Честные цены</span></div>
           <div class="hero-filter">
+            <div class="hero-filter__tags hero-tags swiper js-hero-tags-slider">
+              <div class="hero-tags__wrapper swiper-wrapper"><a class="hero-tags__item ht-item ht-item--active swiper-slide" href="#">Еду из Волгограда и Волжского</a><a class="hero-tags__item ht-item swiper-slide" href="#">Еду в Волгоград</a><a class="hero-tags__item ht-item swiper-slide" href="#">Экскурсии</a><a class="hero-tags__item ht-item swiper-slide" href="#">Билеты</a><a class="hero-tags__item ht-item swiper-slide" href="#">Отели</a></div>
+            </div>
             <form class="tour-search" id="tourSearchForm" action="#" method="get">
               <div class="tour-search__inner">
                 <!-- Куда-->
-                <div class="tour-search__field tour-search__field--destination" data-dropdown="destination">
-                  <div class="tour-search__control-wrap">
-                    <svg class="tour-search__icon" aria-hidden="true">
-                      <use href="assets/icons/symbol/sprite.svg#geo"></use>
-                    </svg>
-                    <input class="tour-search__input tour-search__input--destination" type="text" name="destination" placeholder="Страна, курорт или отель" autocomplete="off" data-destination-input>
-                    <button class="tour-search__clear" type="button" aria-label="Очистить направление" data-destination-clear hidden>
-                      <svg aria-hidden="true">
-                        <use href="assets/icons/symbol/sprite.svg#close"></use>
+                <div class="tour-search__field-box f-01"><span class="tour-search__field-name">Куда</span>
+                  <div class="tour-search__field tour-search__field--destination" data-dropdown="destination">
+                    <div class="tour-search__control-wrap">
+                      <svg class="tour-search__icon" aria-hidden="true">
+                        <use href="assets/icons/symbol/sprite.svg#geo"></use>
                       </svg>
-                    </button>
-                  </div>
-                  <!-- Выпадающий список направлений-->
-                  <div class="tour-search__dropdown tour-search__dropdown--destination" data-dropdown-panel="destination" hidden>
-                    <div class="tour-search__destination-list" data-destination-list>
-                      <!-- Страны-->
-                      <div class="tour-search__group" data-destination-group="country">
-                        <div class="tour-search__group-title">Страны</div>
-                        <label class="tour-search__option">
-                          <input class="tour-search__checkbox" type="checkbox" name="countries[]" value="abkhazia" data-country="abkhazia"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Абхазия</span>
-                        </label>
-                        <label class="tour-search__option">
-                          <input class="tour-search__checkbox" type="checkbox" name="countries[]" value="russia" data-country="russia"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Россия</span>
-                        </label>
-                      </div>
-                      <!-- Курорты-->
-                      <div class="tour-search__group" data-destination-group="resort">
-                        <div class="tour-search__group-title">Курорты</div>
-                        <label class="tour-search__option" data-destination-item data-country="abkhazia">
-                          <input class="tour-search__checkbox" type="checkbox" name="resorts[]" value="sukhum"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Сухум</span><span class="tour-search__option-country">Абхазия</span>
-                        </label>
-                        <label class="tour-search__option" data-destination-item data-country="abkhazia">
-                          <input class="tour-search__checkbox" type="checkbox" name="resorts[]" value="agaraki"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Агараки поселок</span><span class="tour-search__option-country">Абхазия</span>
-                        </label>
-                        <label class="tour-search__option" data-destination-item data-country="russia">
-                          <input class="tour-search__checkbox" type="checkbox" name="resorts[]" value="adygea"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Адыгея республика</span><span class="tour-search__option-country">Россия</span>
-                        </label>
-                        <label class="tour-search__option" data-destination-item data-country="russia">
-                          <input class="tour-search__checkbox" type="checkbox" name="resorts[]" value="altai-republic"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Алтай республика</span><span class="tour-search__option-country">Россия</span>
-                        </label>
-                        <label class="tour-search__option" data-destination-item data-country="russia">
-                          <input class="tour-search__checkbox" type="checkbox" name="resorts[]" value="altai-region"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Алтайский край</span><span class="tour-search__option-country">Россия</span>
-                        </label>
-                      </div>
-                      <!-- Отели-->
-                      <div class="tour-search__group" data-destination-group="hotel">
-                        <div class="tour-search__group-title">Отели</div>
-                        <label class="tour-search__option" data-destination-item data-country="abkhazia">
-                          <input class="tour-search__checkbox" type="checkbox" name="hotels[]" value="hotel-1"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Отель Пример</span><span class="tour-search__option-country">Абхазия</span>
-                        </label>
+                      <input class="tour-search__input tour-search__input--destination" type="text" name="destination" placeholder="Страна, курорт или отель" autocomplete="off" data-destination-input>
+                      <button class="tour-search__clear" type="button" aria-label="Очистить направление" data-destination-clear hidden>
+                        <svg aria-hidden="true">
+                          <use href="assets/icons/symbol/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <!-- Выпадающий список направлений-->
+                    <div class="tour-search__dropdown tour-search__dropdown--destination" data-dropdown-panel="destination" hidden>
+                      <div class="tour-search__destination-list" data-destination-list>
+                        <!-- Страны-->
+                        <div class="tour-search__group" data-destination-group="country">
+                          <div class="tour-search__group-title">Страны</div>
+                          <label class="tour-search__option">
+                            <input class="tour-search__checkbox" type="checkbox" name="countries[]" value="abkhazia" data-country="abkhazia"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Абхазия</span>
+                          </label>
+                          <label class="tour-search__option">
+                            <input class="tour-search__checkbox" type="checkbox" name="countries[]" value="russia" data-country="russia"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Россия</span>
+                          </label>
+                        </div>
+                        <!-- Курорты-->
+                        <div class="tour-search__group" data-destination-group="resort">
+                          <div class="tour-search__group-title">Курорты</div>
+                          <label class="tour-search__option" data-destination-item data-country="abkhazia">
+                            <input class="tour-search__checkbox" type="checkbox" name="resorts[]" value="sukhum"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Сухум</span><span class="tour-search__option-country">Абхазия</span>
+                          </label>
+                          <label class="tour-search__option" data-destination-item data-country="abkhazia">
+                            <input class="tour-search__checkbox" type="checkbox" name="resorts[]" value="agaraki"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Агараки поселок</span><span class="tour-search__option-country">Абхазия</span>
+                          </label>
+                          <label class="tour-search__option" data-destination-item data-country="russia">
+                            <input class="tour-search__checkbox" type="checkbox" name="resorts[]" value="adygea"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Адыгея республика</span><span class="tour-search__option-country">Россия</span>
+                          </label>
+                          <label class="tour-search__option" data-destination-item data-country="russia">
+                            <input class="tour-search__checkbox" type="checkbox" name="resorts[]" value="altai-republic"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Алтай республика</span><span class="tour-search__option-country">Россия</span>
+                          </label>
+                          <label class="tour-search__option" data-destination-item data-country="russia">
+                            <input class="tour-search__checkbox" type="checkbox" name="resorts[]" value="altai-region"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Алтайский край</span><span class="tour-search__option-country">Россия</span>
+                          </label>
+                        </div>
+                        <!-- Отели-->
+                        <div class="tour-search__group" data-destination-group="hotel">
+                          <div class="tour-search__group-title">Отели</div>
+                          <label class="tour-search__option" data-destination-item data-country="abkhazia">
+                            <input class="tour-search__checkbox" type="checkbox" name="hotels[]" value="hotel-1"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Отель Пример</span><span class="tour-search__option-country">Абхазия</span>
+                          </label>
+                          <label class="tour-search__option" data-destination-item data-country="abkhazia">
+                            <input class="tour-search__checkbox" type="checkbox" name="hotels[]" value="hotel-1"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Отель Пример</span><span class="tour-search__option-country">Абхазия</span>
+                          </label>
+                          <label class="tour-search__option" data-destination-item data-country="abkhazia">
+                            <input class="tour-search__checkbox" type="checkbox" name="hotels[]" value="hotel-1"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Отель Пример</span><span class="tour-search__option-country">Абхазия</span>
+                          </label>
+                          <label class="tour-search__option" data-destination-item data-country="abkhazia">
+                            <input class="tour-search__checkbox" type="checkbox" name="hotels[]" value="hotel-1"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Отель Пример</span><span class="tour-search__option-country">Абхазия</span>
+                          </label>
+                          <label class="tour-search__option" data-destination-item data-country="abkhazia">
+                            <input class="tour-search__checkbox" type="checkbox" name="hotels[]" value="hotel-1"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Отель Пример</span><span class="tour-search__option-country">Абхазия</span>
+                          </label>
+                          <label class="tour-search__option" data-destination-item data-country="abkhazia">
+                            <input class="tour-search__checkbox" type="checkbox" name="hotels[]" value="hotel-1"><span class="tour-search__checkbox-custom"></span><span class="tour-search__option-name">Отель Пример</span><span class="tour-search__option-country">Абхазия</span>
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- Даты начала-->
-                <div class="tour-search__field tour-search__field--date" data-dropdown="date">
-                  <button class="tour-search__control" type="button" data-dropdown-trigger="date" aria-expanded="false">
-                    <svg class="tour-search__icon" aria-hidden="true">
-                      <use href="assets/icons/symbol/sprite.svg#calendar"></use>
-                    </svg><span class="tour-search__value" data-date-value>Выберите дату</span>
-                  </button>
-                  <div class="tour-search__dropdown tour-search__dropdown--date" data-dropdown-panel="date" hidden>
-                    <div class="tour-search__date-header">
-                      <div class="tour-search__date-description">Выберите, когда Вам удобно выехать?</div>
-                      <label class="tour-search__flexible">
-                        <input class="tour-search__radio" type="checkbox" name="flexible_dates" value="1" checked data-flexible-dates><span class="tour-search__radio-custom"></span><span>± 3 дня (гибкие даты)</span>
-                      </label>
-                    </div>
-                    <!-- Контейнер календаря-->
-                    <div class="tour-search__calendar" data-calendar>
-                      <!-- Месяцы будут формироваться через JS-->
-                      <div class="tour-search__calendar-months">
-                        <div class="tour-search__month" data-calendar-month>
-                          <div class="tour-search__month-header">
-                            <button class="tour-search__month-arrow" type="button" data-calendar-prev aria-label="Предыдущий месяц">
-                              <svg aria-hidden="true">
-                                <use href="assets/icons/symbol/sprite.svg#arrow-left"></use>
-                              </svg>
-                            </button>
-                            <div class="tour-search__month-title" data-month-title>Декабрь 2026</div>
+                <div class="tour-search__field-box f-02"><span class="tour-search__field-name">Даты начала</span>
+                  <div class="tour-search__field tour-search__field--date" data-dropdown="date">
+                    <button class="tour-search__control" type="button" data-dropdown-trigger="date" aria-expanded="false">
+                      <svg class="tour-search__icon" aria-hidden="true">
+                        <use href="assets/icons/symbol/sprite.svg#calendar"></use>
+                      </svg><span class="tour-search__value" data-date-value>Выберите дату</span>
+                    </button>
+                    <div class="tour-search__dropdown tour-search__dropdown--date" data-dropdown-panel="date" hidden>
+                      <div class="tour-search__date-header">
+                        <div class="tour-search__date-description">Выберите, когда Вам удобно выехать?</div>
+                        <label class="tour-search__flexible">
+                          <input class="tour-search__radio" type="checkbox" name="flexible_dates" value="1" checked data-flexible-dates><span class="tour-search__radio-custom"></span><span>± 3 дня (гибкие даты)</span>
+                        </label>
+                      </div>
+                      <!-- Контейнер календаря-->
+                      <div class="tour-search__calendar" data-calendar>
+                        <!-- Месяцы будут формироваться через JS-->
+                        <div class="tour-search__calendar-months">
+                          <div class="tour-search__month" data-calendar-month>
+                            <div class="tour-search__month-header">
+                              <button class="tour-search__month-arrow" type="button" data-calendar-prev aria-label="Предыдущий месяц">
+                                <svg aria-hidden="true">
+                                  <use href="assets/icons/symbol/sprite.svg#arrow-left"></use>
+                                </svg>
+                              </button>
+                              <div class="tour-search__month-title" data-month-title>Декабрь 2026</div>
+                            </div>
+                            <div class="tour-search__weekdays"><span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
+                            </div>
+                            <div class="tour-search__days" data-month-days></div>
                           </div>
-                          <div class="tour-search__weekdays"><span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
+                          <div class="tour-search__month" data-calendar-month>
+                            <div class="tour-search__month-header">
+                              <div class="tour-search__month-title" data-month-title>Январь 2027</div>
+                              <button class="tour-search__month-arrow" type="button" data-calendar-next aria-label="Следующий месяц">
+                                <svg aria-hidden="true">
+                                  <use href="assets/icons/symbol/sprite.svg#arrow-right"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="tour-search__weekdays"><span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
+                            </div>
+                            <div class="tour-search__days" data-month-days></div>
                           </div>
-                          <div class="tour-search__days" data-month-days></div>
-                        </div>
-                        <div class="tour-search__month" data-calendar-month>
-                          <div class="tour-search__month-header">
-                            <div class="tour-search__month-title" data-month-title>Январь 2027</div>
-                            <button class="tour-search__month-arrow" type="button" data-calendar-next aria-label="Следующий месяц">
-                              <svg aria-hidden="true">
-                                <use href="assets/icons/symbol/sprite.svg#arrow-right"></use>
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="tour-search__weekdays"><span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
-                          </div>
-                          <div class="tour-search__days" data-month-days></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- Количество ночей-->
-                <div class="tour-search__field tour-search__field--nights" data-dropdown="nights">
-                  <button class="tour-search__control" type="button" data-dropdown-trigger="nights" aria-expanded="false">
-                    <svg class="tour-search__icon" aria-hidden="true">
-                      <use href="assets/icons/symbol/sprite.svg#moon"></use>
-                    </svg><span class="tour-search__value" data-nights-value>на 5-7 ночей</span>
-                  </button>
-                  <div class="tour-search__dropdown tour-search__dropdown--nights" data-dropdown-panel="nights" hidden>
-                    <div class="tour-search__nights-header">
-                      <div class="tour-search__counter-group">
-                        <div class="tour-search__counter-title">От</div>
-                        <div class="tour-search__counter">
-                          <button class="tour-search__counter-btn" type="button" data-counter-action="minus" data-counter-target="nights-from" aria-label="Уменьшить количество ночей">−</button>
-                          <input class="tour-search__counter-value" type="number" name="nights_from" value="5" min="1" max="30" data-nights-from>
-                          <button class="tour-search__counter-btn" type="button" data-counter-action="plus" data-counter-target="nights-from" aria-label="Увеличить количество ночей">+</button>
-                        </div>
-                        <div class="tour-search__counter-title">До</div>
-                        <div class="tour-search__counter">
-                          <button class="tour-search__counter-btn" type="button" data-counter-action="minus" data-counter-target="nights-to" aria-label="Уменьшить количество ночей">−</button>
-                          <input class="tour-search__counter-value" type="number" name="nights_to" value="7" min="1" max="30" data-nights-to>
-                          <button class="tour-search__counter-btn" type="button" data-counter-action="plus" data-counter-target="nights-to" aria-label="Увеличить количество ночей">+</button>
+                <div class="tour-search__field-box f-03"><span class="tour-search__field-name">Ночей</span>
+                  <div class="tour-search__field tour-search__field--nights" data-dropdown="nights">
+                    <button class="tour-search__control" type="button" data-dropdown-trigger="nights" aria-expanded="false">
+                      <svg class="tour-search__icon" aria-hidden="true">
+                        <use href="assets/icons/symbol/sprite.svg#moon"></use>
+                      </svg><span class="tour-search__value" data-nights-value>на 5-7 ночей</span>
+                    </button>
+                    <div class="tour-search__dropdown tour-search__dropdown--nights" data-dropdown-panel="nights" hidden>
+                      <div class="tour-search__nights-header">
+                        <div class="tour-search__counter-group">
+                          <div class="tour-search__counter-title">От</div>
+                          <div class="tour-search__counter">
+                            <button class="tour-search__counter-btn" type="button" data-counter-action="minus" data-counter-target="nights-from" aria-label="Уменьшить количество ночей">−</button>
+                            <input class="tour-search__counter-value" type="number" name="nights_from" value="5" min="1" max="30" data-nights-from>
+                            <button class="tour-search__counter-btn" type="button" data-counter-action="plus" data-counter-target="nights-from" aria-label="Увеличить количество ночей">+</button>
+                          </div>
+                          <div class="tour-search__counter-title">До</div>
+                          <div class="tour-search__counter">
+                            <button class="tour-search__counter-btn" type="button" data-counter-action="minus" data-counter-target="nights-to" aria-label="Уменьшить количество ночей">−</button>
+                            <input class="tour-search__counter-value" type="number" name="nights_to" value="7" min="1" max="30" data-nights-to>
+                            <button class="tour-search__counter-btn" type="button" data-counter-action="plus" data-counter-target="nights-to" aria-label="Увеличить количество ночей">+</button>
+                          </div>
                         </div>
                       </div>
+                      <div class="tour-search__nights-info">Выбраны туры с <span data-nights-date>выберите дату</span><span data-nights-flexible></span> на <span data-nights-from-text>5</span>-<span data-nights-to-text>7</span> ночей</div>
                     </div>
-                    <div class="tour-search__nights-info">Выбраны туры с<span data-nights-date>выберите дату</span><span data-nights-flexible></span> на<span data-nights-from-text>5</span>-<span data-nights-to-text>7</span> ночей</div>
                   </div>
                 </div>
                 <!-- Туристы-->
-                <div class="tour-search__field tour-search__field--tourists" data-dropdown="tourists">
-                  <button class="tour-search__control" type="button" data-dropdown-trigger="tourists" aria-expanded="false">
-                    <svg class="tour-search__icon" aria-hidden="true">
-                      <use href="assets/icons/symbol/sprite.svg#user"></use>
-                    </svg><span class="tour-search__value" data-tourists-value>2 взрослых</span>
-                  </button>
-                  <div class="tour-search__dropdown tour-search__dropdown--tourists" data-dropdown-panel="tourists" hidden>
-                    <!-- Взрослые-->
-                    <div class="tour-search__tourists-group">
-                      <div class="tour-search__tourists-title">Взрослые</div>
-                      <div class="tour-search__choices">
-                        <label class="tour-search__choice">
-                          <input class="tour-search__radio" type="radio" name="adults" value="1"><span class="tour-search__choice-label">1</span>
-                        </label>
-                        <label class="tour-search__choice">
-                          <input class="tour-search__radio" type="radio" name="adults" value="2" checked><span class="tour-search__choice-label">2</span>
-                        </label>
-                        <label class="tour-search__choice">
-                          <input class="tour-search__radio" type="radio" name="adults" value="3"><span class="tour-search__choice-label">3</span>
-                        </label>
-                        <label class="tour-search__choice">
-                          <input class="tour-search__radio" type="radio" name="adults" value="4"><span class="tour-search__choice-label">4</span>
-                        </label>
+                <div class="tour-search__field-box f-04"><span class="tour-search__field-name">Туристы</span>
+                  <div class="tour-search__field tour-search__field--tourists" data-dropdown="tourists">
+                    <button class="tour-search__control" type="button" data-dropdown-trigger="tourists" aria-expanded="false">
+                      <svg class="tour-search__icon" aria-hidden="true">
+                        <use href="assets/icons/symbol/sprite.svg#user"></use>
+                      </svg><span class="tour-search__value" data-tourists-value>2 взрослых</span>
+                    </button>
+                    <div class="tour-search__dropdown tour-search__dropdown--tourists" data-dropdown-panel="tourists" hidden>
+                      <!-- Взрослые-->
+                      <div class="tour-search__tourists-group">
+                        <div class="tour-search__tourists-title">Взрослые</div>
+                        <div class="tour-search__choices">
+                          <label class="tour-search__choice">
+                            <input class="tour-search__radio" type="radio" name="adults" value="1"><span class="tour-search__choice-label">1</span>
+                          </label>
+                          <label class="tour-search__choice">
+                            <input class="tour-search__radio" type="radio" name="adults" value="2" checked><span class="tour-search__choice-label">2</span>
+                          </label>
+                          <label class="tour-search__choice">
+                            <input class="tour-search__radio" type="radio" name="adults" value="3"><span class="tour-search__choice-label">3</span>
+                          </label>
+                          <label class="tour-search__choice">
+                            <input class="tour-search__radio" type="radio" name="adults" value="4"><span class="tour-search__choice-label">4</span>
+                          </label>
+                        </div>
                       </div>
-                    </div>
-                    <!-- Дети-->
-                    <div class="tour-search__tourists-group">
-                      <div class="tour-search__tourists-title">Дети</div>
-                      <div class="tour-search__choices">
-                        <label class="tour-search__choice">
-                          <input class="tour-search__radio" type="radio" name="children" value="0" checked><span class="tour-search__choice-label">Нет</span>
-                        </label>
-                        <label class="tour-search__choice">
-                          <input class="tour-search__radio" type="radio" name="children" value="1"><span class="tour-search__choice-label">1</span>
-                        </label>
-                        <label class="tour-search__choice">
-                          <input class="tour-search__radio" type="radio" name="children" value="2"><span class="tour-search__choice-label">2</span>
-                        </label>
-                        <label class="tour-search__choice">
-                          <input class="tour-search__radio" type="radio" name="children" value="3"><span class="tour-search__choice-label">3</span>
-                        </label>
+                      <!-- Дети-->
+                      <div class="tour-search__tourists-group">
+                        <div class="tour-search__tourists-title">Дети</div>
+                        <div class="tour-search__choices">
+                          <label class="tour-search__choice">
+                            <input class="tour-search__radio" type="radio" name="children" value="0" checked><span class="tour-search__choice-label">Нет</span>
+                          </label>
+                          <label class="tour-search__choice">
+                            <input class="tour-search__radio" type="radio" name="children" value="1"><span class="tour-search__choice-label">1</span>
+                          </label>
+                          <label class="tour-search__choice">
+                            <input class="tour-search__radio" type="radio" name="children" value="2"><span class="tour-search__choice-label">2</span>
+                          </label>
+                          <label class="tour-search__choice">
+                            <input class="tour-search__radio" type="radio" name="children" value="3"><span class="tour-search__choice-label">3</span>
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- Кнопка поиска-->
-                <button class="tour-search__submit" type="submit">Искать туры</button>
+                <button class="tour-search__submit btn btn-fill" type="submit">
+                  <svg class="btn-icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#search"></use>
+                  </svg>Искать туры
+                </button>
               </div>
             </form>
+            <div class="hero-filter__list hero-flist swiper js-hero-flist-slider">
+              <div class="hero-flist__wrapper swiper-wrapper"><a class="hero-flist__item flist-item flist-item--active swiper-slide" href="#"> 
+                  <svg class="flist-item__icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#notifications"></use>
+                  </svg><span class="flist-item__name">Активные туры</span><span class="flist-item__count">30 туров </span></a><a class="hero-flist__item flist-item swiper-slide" href="#"> 
+                  <svg class="flist-item__icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#calend"></use>
+                  </svg><span class="flist-item__name">На выходные</span><span class="flist-item__count">40 туров </span></a><a class="hero-flist__item flist-item swiper-slide" href="#"> 
+                  <svg class="flist-item__icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#holiday"></use>
+                  </svg><span class="flist-item__name">На праздники</span><span class="flist-item__count">14 туров </span></a><a class="hero-flist__item flist-item swiper-slide" href="#"> 
+                  <svg class="flist-item__icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#house"></use>
+                  </svg><span class="flist-item__name">Экскурсионные</span><span class="flist-item__count">324 туров </span></a><a class="hero-flist__item flist-item swiper-slide" href="#"> 
+                  <svg class="flist-item__icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#relax"></use>
+                  </svg><span class="flist-item__name">Отдых на море</span><span class="flist-item__count">224 туров </span></a><a class="hero-flist__item flist-item swiper-slide" href="#"> 
+                  <svg class="flist-item__icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#notifications"></use>
+                  </svg><span class="flist-item__name">Активные туры</span><span class="flist-item__count">30 туров </span></a><a class="hero-flist__item flist-item swiper-slide" href="#"> 
+                  <svg class="flist-item__icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#calend"></use>
+                  </svg><span class="flist-item__name">На выходные</span><span class="flist-item__count">40 туров </span></a><a class="hero-flist__item flist-item swiper-slide" href="#"> 
+                  <svg class="flist-item__icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#holiday"></use>
+                  </svg><span class="flist-item__name">На праздники</span><span class="flist-item__count">14 туров </span></a><a class="hero-flist__item flist-item swiper-slide" href="#"> 
+                  <svg class="flist-item__icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#house"></use>
+                  </svg><span class="flist-item__name">Экскурсионные</span><span class="flist-item__count">324 туров </span></a><a class="hero-flist__item flist-item swiper-slide" href="#"> 
+                  <svg class="flist-item__icon" aria-hidden="true">
+                    <use href="assets/icons/symbol/sprite.svg#relax"></use>
+                  </svg><span class="flist-item__name">Отдых на море</span><span class="flist-item__count">224 туров </span></a></div>
+            </div>
+            <div class="flist-pagination__box">
+              <div class="flist-pagination"></div>
+            </div>
           </div>
         </div>
       </div>

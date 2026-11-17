@@ -3,368 +3,443 @@ form#tourSearchForm.tour-search(action="#" method="get")
 	.tour-search__inner
 
 		// Куда
-		.tour-search__field.tour-search__field--destination(data-dropdown="destination")
+		.tour-search__field-box.f-01
+			span.tour-search__field-name Куда
+			.tour-search__field.tour-search__field--destination(data-dropdown="destination")
 
-			.tour-search__control-wrap
-				svg.tour-search__icon(aria-hidden="true")
-					use(href="assets/icons/symbol/sprite.svg#geo")
+				.tour-search__control-wrap
+					svg.tour-search__icon(aria-hidden="true")
+						use(href="assets/icons/symbol/sprite.svg#geo")
 
-				input.tour-search__input.tour-search__input--destination(
-					type="text"
-					name="destination"
-					placeholder="Страна, курорт или отель"
-					autocomplete="off"
-					data-destination-input
-				)
+					input.tour-search__input.tour-search__input--destination(
+						type="text"
+						name="destination"
+						placeholder="Страна, курорт или отель"
+						autocomplete="off"
+						data-destination-input
+					)
 
-				button.tour-search__clear(
-					type="button"
-					aria-label="Очистить направление"
-					data-destination-clear
+					button.tour-search__clear(
+						type="button"
+						aria-label="Очистить направление"
+						data-destination-clear
+						hidden
+					)
+						svg(aria-hidden="true")
+							use(href="assets/icons/symbol/sprite.svg#close")
+
+				// Выпадающий список направлений
+				.tour-search__dropdown.tour-search__dropdown--destination(
+					data-dropdown-panel="destination"
 					hidden
 				)
-					svg(aria-hidden="true")
-						use(href="assets/icons/symbol/sprite.svg#close")
 
-			// Выпадающий список направлений
-			.tour-search__dropdown.tour-search__dropdown--destination(
-				data-dropdown-panel="destination"
-				hidden
-			)
+					.tour-search__destination-list(data-destination-list)
 
-				.tour-search__destination-list(data-destination-list)
+						// Страны
+						.tour-search__group(data-destination-group="country")
+							.tour-search__group-title Страны
 
-					// Страны
-					.tour-search__group(data-destination-group="country")
-						.tour-search__group-title Страны
+							label.tour-search__option
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="countries[]"
+									value="abkhazia"
+									data-country="abkhazia"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Абхазия
 
-						label.tour-search__option
-							input.tour-search__checkbox(
-								type="checkbox"
-								name="countries[]"
-								value="abkhazia"
+							label.tour-search__option
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="countries[]"
+									value="russia"
+									data-country="russia"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Россия
+
+						// Курорты
+						.tour-search__group(data-destination-group="resort")
+							.tour-search__group-title Курорты
+
+							label.tour-search__option(
+								data-destination-item
 								data-country="abkhazia"
 							)
-							span.tour-search__checkbox-custom
-							span.tour-search__option-name Абхазия
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="resorts[]"
+									value="sukhum"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Сухум
+								span.tour-search__option-country Абхазия
 
-						label.tour-search__option
-							input.tour-search__checkbox(
-								type="checkbox"
-								name="countries[]"
-								value="russia"
+							label.tour-search__option(
+								data-destination-item
+								data-country="abkhazia"
+							)
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="resorts[]"
+									value="agaraki"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Агараки поселок
+								span.tour-search__option-country Абхазия
+
+							label.tour-search__option(
+								data-destination-item
 								data-country="russia"
 							)
-							span.tour-search__checkbox-custom
-							span.tour-search__option-name Россия
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="resorts[]"
+									value="adygea"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Адыгея республика
+								span.tour-search__option-country Россия
 
-					// Курорты
-					.tour-search__group(data-destination-group="resort")
-						.tour-search__group-title Курорты
-
-						label.tour-search__option(
-							data-destination-item
-							data-country="abkhazia"
-						)
-							input.tour-search__checkbox(
-								type="checkbox"
-								name="resorts[]"
-								value="sukhum"
+							label.tour-search__option(
+								data-destination-item
+								data-country="russia"
 							)
-							span.tour-search__checkbox-custom
-							span.tour-search__option-name Сухум
-							span.tour-search__option-country Абхазия
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="resorts[]"
+									value="altai-republic"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Алтай республика
+								span.tour-search__option-country Россия
 
-						label.tour-search__option(
-							data-destination-item
-							data-country="abkhazia"
-						)
-							input.tour-search__checkbox(
-								type="checkbox"
-								name="resorts[]"
-								value="agaraki"
+							label.tour-search__option(
+								data-destination-item
+								data-country="russia"
 							)
-							span.tour-search__checkbox-custom
-							span.tour-search__option-name Агараки поселок
-							span.tour-search__option-country Абхазия
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="resorts[]"
+									value="altai-region"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Алтайский край
+								span.tour-search__option-country Россия
 
-						label.tour-search__option(
-							data-destination-item
-							data-country="russia"
-						)
-							input.tour-search__checkbox(
-								type="checkbox"
-								name="resorts[]"
-								value="adygea"
+						// Отели
+						.tour-search__group(data-destination-group="hotel")
+							.tour-search__group-title Отели
+
+							label.tour-search__option(
+								data-destination-item
+								data-country="abkhazia"
 							)
-							span.tour-search__checkbox-custom
-							span.tour-search__option-name Адыгея республика
-							span.tour-search__option-country Россия
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="hotels[]"
+									value="hotel-1"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Отель Пример
+								span.tour-search__option-country Абхазия
 
-						label.tour-search__option(
-							data-destination-item
-							data-country="russia"
-						)
-							input.tour-search__checkbox(
-								type="checkbox"
-								name="resorts[]"
-								value="altai-republic"
+							label.tour-search__option(
+								data-destination-item
+								data-country="abkhazia"
 							)
-							span.tour-search__checkbox-custom
-							span.tour-search__option-name Алтай республика
-							span.tour-search__option-country Россия
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="hotels[]"
+									value="hotel-1"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Отель Пример
+								span.tour-search__option-country Абхазия
 
-						label.tour-search__option(
-							data-destination-item
-							data-country="russia"
-						)
-							input.tour-search__checkbox(
-								type="checkbox"
-								name="resorts[]"
-								value="altai-region"
+							label.tour-search__option(
+								data-destination-item
+								data-country="abkhazia"
 							)
-							span.tour-search__checkbox-custom
-							span.tour-search__option-name Алтайский край
-							span.tour-search__option-country Россия
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="hotels[]"
+									value="hotel-1"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Отель Пример
+								span.tour-search__option-country Абхазия
 
-					// Отели
-					.tour-search__group(data-destination-group="hotel")
-						.tour-search__group-title Отели
-
-						label.tour-search__option(
-							data-destination-item
-							data-country="abkhazia"
-						)
-							input.tour-search__checkbox(
-								type="checkbox"
-								name="hotels[]"
-								value="hotel-1"
+							label.tour-search__option(
+								data-destination-item
+								data-country="abkhazia"
 							)
-							span.tour-search__checkbox-custom
-							span.tour-search__option-name Отель Пример
-							span.tour-search__option-country Абхазия
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="hotels[]"
+									value="hotel-1"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Отель Пример
+								span.tour-search__option-country Абхазия
+
+							label.tour-search__option(
+								data-destination-item
+								data-country="abkhazia"
+							)
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="hotels[]"
+									value="hotel-1"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Отель Пример
+								span.tour-search__option-country Абхазия
+
+							label.tour-search__option(
+								data-destination-item
+								data-country="abkhazia"
+							)
+								input.tour-search__checkbox(
+									type="checkbox"
+									name="hotels[]"
+									value="hotel-1"
+								)
+								span.tour-search__checkbox-custom
+								span.tour-search__option-name Отель Пример
+								span.tour-search__option-country Абхазия
 
 
 		// Даты начала
-		.tour-search__field.tour-search__field--date(data-dropdown="date")
+		.tour-search__field-box.f-02
+			span.tour-search__field-name Даты начала
+			.tour-search__field.tour-search__field--date(data-dropdown="date")
 
-			button.tour-search__control(
-				type="button"
-				data-dropdown-trigger="date"
-				aria-expanded="false"
-			)
-				svg.tour-search__icon(aria-hidden="true")
-					use(href="assets/icons/symbol/sprite.svg#calendar")
+				button.tour-search__control(
+					type="button"
+					data-dropdown-trigger="date"
+					aria-expanded="false"
+				)
+					svg.tour-search__icon(aria-hidden="true")
+						use(href="assets/icons/symbol/sprite.svg#calendar")
 
-				span.tour-search__value(data-date-value) Выберите дату
+					span.tour-search__value(data-date-value) Выберите дату
 
-			.tour-search__dropdown.tour-search__dropdown--date(
-				data-dropdown-panel="date"
-				hidden
-			)
+				.tour-search__dropdown.tour-search__dropdown--date(
+					data-dropdown-panel="date"
+					hidden
+				)
 
-				.tour-search__date-header
-					.tour-search__date-description
-						| Выберите, когда Вам удобно выехать?
+					.tour-search__date-header
+						.tour-search__date-description
+							| Выберите, когда Вам удобно выехать?
 
-					label.tour-search__flexible
-						input.tour-search__radio(
-							type="checkbox"
-							name="flexible_dates"
-							value="1"
-							checked
-							data-flexible-dates
-						)
-						span.tour-search__radio-custom
-						span ± 3 дня (гибкие даты)
+						label.tour-search__flexible
+							input.tour-search__radio(
+								type="checkbox"
+								name="flexible_dates"
+								value="1"
+								checked
+								data-flexible-dates
+							)
+							span.tour-search__radio-custom
+							span ± 3 дня (гибкие даты)
 
-				// Контейнер календаря
-				.tour-search__calendar(data-calendar)
+					// Контейнер календаря
+					.tour-search__calendar(data-calendar)
 
-					// Месяцы будут формироваться через JS
-					.tour-search__calendar-months
+						// Месяцы будут формироваться через JS
+						.tour-search__calendar-months
 
-						.tour-search__month(data-calendar-month)
+							.tour-search__month(data-calendar-month)
 
-							.tour-search__month-header
-								button.tour-search__month-arrow(
-									type="button"
-									data-calendar-prev
-									aria-label="Предыдущий месяц"
-								)
-									svg(aria-hidden="true")
-										use(href="assets/icons/symbol/sprite.svg#arrow-left")
+								.tour-search__month-header
+									button.tour-search__month-arrow(
+										type="button"
+										data-calendar-prev
+										aria-label="Предыдущий месяц"
+									)
+										svg(aria-hidden="true")
+											use(href="assets/icons/symbol/sprite.svg#arrow-left")
 
-								.tour-search__month-title(data-month-title)
-									| Декабрь 2026
+									.tour-search__month-title(data-month-title)
+										| Декабрь 2026
 
-							.tour-search__weekdays
-								each day in ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС']
-									span= day
+								.tour-search__weekdays
+									each day in ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС']
+										span= day
 
-							.tour-search__days(data-month-days)
+								.tour-search__days(data-month-days)
 
-						.tour-search__month(data-calendar-month)
+							.tour-search__month(data-calendar-month)
 
-							.tour-search__month-header
-								.tour-search__month-title(data-month-title)
-									| Январь 2027
+								.tour-search__month-header
+									.tour-search__month-title(data-month-title)
+										| Январь 2027
 
-								button.tour-search__month-arrow(
-									type="button"
-									data-calendar-next
-									aria-label="Следующий месяц"
-								)
-									svg(aria-hidden="true")
-										use(href="assets/icons/symbol/sprite.svg#arrow-right")
+									button.tour-search__month-arrow(
+										type="button"
+										data-calendar-next
+										aria-label="Следующий месяц"
+									)
+										svg(aria-hidden="true")
+											use(href="assets/icons/symbol/sprite.svg#arrow-right")
 
-							.tour-search__weekdays
-								each day in ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС']
-									span= day
+								.tour-search__weekdays
+									each day in ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС']
+										span= day
 
-							.tour-search__days(data-month-days)
+								.tour-search__days(data-month-days)
 
 
 		// Количество ночей
-		.tour-search__field.tour-search__field--nights(data-dropdown="nights")
+		.tour-search__field-box.f-03
+			span.tour-search__field-name Ночей
+			.tour-search__field.tour-search__field--nights(data-dropdown="nights")
 
-			button.tour-search__control(
-				type="button"
-				data-dropdown-trigger="nights"
-				aria-expanded="false"
-			)
-				svg.tour-search__icon(aria-hidden="true")
-					use(href="assets/icons/symbol/sprite.svg#moon")
+				button.tour-search__control(
+					type="button"
+					data-dropdown-trigger="nights"
+					aria-expanded="false"
+				)
+					svg.tour-search__icon(aria-hidden="true")
+						use(href="assets/icons/symbol/sprite.svg#moon")
 
-				span.tour-search__value(data-nights-value) на 5-7 ночей
+					span.tour-search__value(data-nights-value) на 5-7 ночей
 
-			.tour-search__dropdown.tour-search__dropdown--nights(
-				data-dropdown-panel="nights"
-				hidden
-			)
+				.tour-search__dropdown.tour-search__dropdown--nights(
+					data-dropdown-panel="nights"
+					hidden
+				)
 
-				.tour-search__nights-header
-					.tour-search__counter-group
+					.tour-search__nights-header
+						.tour-search__counter-group
 
-						.tour-search__counter-title От
+							.tour-search__counter-title От
 
-						.tour-search__counter
-							button.tour-search__counter-btn(
-								type="button"
-								data-counter-action="minus"
-								data-counter-target="nights-from"
-								aria-label="Уменьшить количество ночей"
-							)
-								| −
+							.tour-search__counter
+								button.tour-search__counter-btn(
+									type="button"
+									data-counter-action="minus"
+									data-counter-target="nights-from"
+									aria-label="Уменьшить количество ночей"
+								)
+									| −
 
-							input.tour-search__counter-value(
-								type="number"
-								name="nights_from"
-								value="5"
-								min="1"
-								max="30"
-								data-nights-from
-							)
+								input.tour-search__counter-value(
+									type="number"
+									name="nights_from"
+									value="5"
+									min="1"
+									max="30"
+									data-nights-from
+								)
 
-							button.tour-search__counter-btn(
-								type="button"
-								data-counter-action="plus"
-								data-counter-target="nights-from"
-								aria-label="Увеличить количество ночей"
-							)
-								| +
+								button.tour-search__counter-btn(
+									type="button"
+									data-counter-action="plus"
+									data-counter-target="nights-from"
+									aria-label="Увеличить количество ночей"
+								)
+									| +
 
-						.tour-search__counter-title До
+							.tour-search__counter-title До
 
-						.tour-search__counter
-							button.tour-search__counter-btn(
-								type="button"
-								data-counter-action="minus"
-								data-counter-target="nights-to"
-								aria-label="Уменьшить количество ночей"
-							)
-								| −
+							.tour-search__counter
+								button.tour-search__counter-btn(
+									type="button"
+									data-counter-action="minus"
+									data-counter-target="nights-to"
+									aria-label="Уменьшить количество ночей"
+								)
+									| −
 
-							input.tour-search__counter-value(
-								type="number"
-								name="nights_to"
-								value="7"
-								min="1"
-								max="30"
-								data-nights-to
-							)
+								input.tour-search__counter-value(
+									type="number"
+									name="nights_to"
+									value="7"
+									min="1"
+									max="30"
+									data-nights-to
+								)
 
-							button.tour-search__counter-btn(
-								type="button"
-								data-counter-action="plus"
-								data-counter-target="nights-to"
-								aria-label="Увеличить количество ночей"
-							)
-								| +
+								button.tour-search__counter-btn(
+									type="button"
+									data-counter-action="plus"
+									data-counter-target="nights-to"
+									aria-label="Увеличить количество ночей"
+								)
+									| +
 
-				.tour-search__nights-info
-					| Выбраны туры с
-					span(data-nights-date) выберите дату
-					span(data-nights-flexible)
-					|  на
-					span(data-nights-from-text) 5
-					| -
-					span(data-nights-to-text) 7
-					|  ночей
+					.tour-search__nights-info
+						| Выбраны туры с 
+						span(data-nights-date) выберите дату
+						span(data-nights-flexible)
+						|  на 
+						span(data-nights-from-text) 5
+						| -
+						span(data-nights-to-text) 7
+						|  ночей
 
 
 		// Туристы
-		.tour-search__field.tour-search__field--tourists(data-dropdown="tourists")
+		.tour-search__field-box.f-04
+			span.tour-search__field-name Туристы
+			.tour-search__field.tour-search__field--tourists(data-dropdown="tourists")
 
-			button.tour-search__control(
-				type="button"
-				data-dropdown-trigger="tourists"
-				aria-expanded="false"
-			)
-				svg.tour-search__icon(aria-hidden="true")
-					use(href="assets/icons/symbol/sprite.svg#user")
+				button.tour-search__control(
+					type="button"
+					data-dropdown-trigger="tourists"
+					aria-expanded="false"
+				)
+					svg.tour-search__icon(aria-hidden="true")
+						use(href="assets/icons/symbol/sprite.svg#user")
 
-				span.tour-search__value(data-tourists-value) 2 взрослых
+					span.tour-search__value(data-tourists-value) 2 взрослых
 
-			.tour-search__dropdown.tour-search__dropdown--tourists(
-				data-dropdown-panel="tourists"
-				hidden
-			)
+				.tour-search__dropdown.tour-search__dropdown--tourists(
+					data-dropdown-panel="tourists"
+					hidden
+				)
 
-				// Взрослые
-				.tour-search__tourists-group
+					// Взрослые
+					.tour-search__tourists-group
 
-					.tour-search__tourists-title Взрослые
+						.tour-search__tourists-title Взрослые
 
-					.tour-search__choices
-						each count in [1, 2, 3, 4]
-							label.tour-search__choice
-								input.tour-search__radio(
-									type="radio"
-									name="adults"
-									value=count
-									checked=count === 2
-								)
-								span.tour-search__choice-label= count
+						.tour-search__choices
+							each count in [1, 2, 3, 4]
+								label.tour-search__choice
+									input.tour-search__radio(
+										type="radio"
+										name="adults"
+										value=count
+										checked=count === 2
+									)
+									span.tour-search__choice-label= count
 
 
-				// Дети
-				.tour-search__tourists-group
+					// Дети
+					.tour-search__tourists-group
 
-					.tour-search__tourists-title Дети
+						.tour-search__tourists-title Дети
 
-					.tour-search__choices
-						each count, index in [0, 1, 2, 3]
-							label.tour-search__choice
-								input.tour-search__radio(
-									type="radio"
-									name="children"
-									value=count
-									checked=count === 0
-								)
-								span.tour-search__choice-label= index === 0 ? 'Нет' : count
+						.tour-search__choices
+							each count, index in [0, 1, 2, 3]
+								label.tour-search__choice
+									input.tour-search__radio(
+										type="radio"
+										name="children"
+										value=count
+										checked=count === 0
+									)
+									span.tour-search__choice-label= index === 0 ? 'Нет' : count
 
 
 		// Кнопка поиска
-		button.tour-search__submit(type="submit")
+		button.tour-search__submit.btn.btn-fill(type="submit")
+			svg.btn-icon(aria-hidden="true")
+				use(href="assets/icons/symbol/sprite.svg#search")
 			| Искать туры

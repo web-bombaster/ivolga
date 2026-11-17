@@ -11,6 +11,7 @@ function selectedToursInit() {
 		
 		pagination: {
 			el: '.stours-slider__pagination',
+			clickable: true,
 		},
 		
 		breakpoints: {

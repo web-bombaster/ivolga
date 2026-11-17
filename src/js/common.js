@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	// include './../js/myscripts/helpers.js'
 	// include './../js/myscripts/tour-search.js'
+	// include './../js/myscripts/filter-tags.js'
+	// include './../js/myscripts/hero-flist.js'
 	// include './../js/myscripts/selected-tours.js'
 	// include './../js/myscripts/hot-tours.js'
 	// include './../js/myscripts/ideas.js'
